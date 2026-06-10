@@ -528,89 +528,155 @@ body{background:#080c22;color:#e0e0e0;font-family:'Segoe UI',system-ui,-apple-sy
 <!-- TAB 3: CRONOGRAMA RANKMI -->
 <div id="tab-cronograma" class="tab-content">
 <div class="informe" style="max-width:1200px">
-<h1>CRONOGRAMA RANKMI — PLAN DE TRABAJO IMPLEMENTACIÓN</h1>
-<p class="subtitle">Ejecución: 01/06/2026 — 31/01/2027 | 3 frentes: Entregables Funcionales (TH) + Arquitectura + Desarrollo Integraciones</p>
+<h1>CRONOGRAMA RANKMI — PLAN DE TRABAJO</h1>
+<p class="subtitle">01/06/2026 — 31/01/2027 | Entregables Funcionales + Arquitectura + Desarrollo Integraciones</p>
 
-<!-- GANTT CHART CSS -->
-<style>.gantt-row{display:grid;grid-template-columns:240px 80px 80px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #1a2550;font-size:11px}.gantt-row:hover{background:rgba(100,181,246,.04)}.gantt-header{background:#111940;font-weight:600;color:#90caf9;padding:8px 0}.gantt-phase{background:rgba(100,181,246,.06);font-weight:700;color:#64b5f6;padding:4px 0}.gantt-bar{height:14px;border-radius:3px;position:absolute;top:50%;transform:translateY(-50%)}.gantt-timeline{position:relative;height:100%}</style>
+<!-- GANTT CSS -->
+<style>
+.gantt-container{background:#0d1230;border:1px solid #1a2550;border-radius:10px;padding:16px;overflow-x:auto;margin:20px 0}
+.gantt-grid{display:grid;grid-template-columns:250px repeat(8,1fr);min-width:900px}
+.gantt-month{text-align:center;padding:8px 4px;font-size:10px;font-weight:700;color:#7a8bb5;border-bottom:1px solid #1a2550}
+.gantt-row-label{padding:4px 8px;font-size:10px;color:#c0cce0;border-bottom:1px solid #0f1535;display:flex;align-items:center;min-height:26px}
+.gantt-row-cell{border-bottom:1px solid #0f1535;border-left:1px solid #0f1535;position:relative;min-height:26px}
+.gantt-bar-item{position:absolute;top:5px;height:16px;border-radius:3px}
+.gantt-phase-label{padding:6px 8px;font-size:11px;font-weight:700;border-bottom:1px solid #1a2550;display:flex;align-items:center;min-height:30px}
+</style>
 
-<h2>Entregables Funcionales (TH)</h2>
-<table class="info-table">
-<thead><tr><th>Actividad</th><th>Inicio</th><th>Fin</th><th>Días</th><th>Resp.</th></tr></thead>
-<tbody>
-<tr><td style="font-weight:600">Configuración Hub (Subdominios, logos, roles)</td><td>01/06/2026</td><td>31/07/2026</td><td>61</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Configuración Vacaciones (reglas, políticas, cálculos, histórica)</td><td>01/07/2026</td><td>14/08/2026</td><td>45</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Firma Digital</td><td>01/06/2026</td><td>31/08/2026</td><td>92</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Parametrización empresas y contratos</td><td>01/06/2026</td><td>19/06/2026</td><td>19</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Cargue información histórica contratos</td><td>16/06/2026</td><td>20/07/2026</td><td>35</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Cargue nómina histórica (último año)</td><td>29/06/2026</td><td>31/08/2026</td><td>64</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Diseño percepciones y descuentos nómina</td><td>01/06/2026</td><td>03/07/2026</td><td>33</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Formulación conceptos y pruebas unitarias</td><td>01/07/2026</td><td>17/08/2026</td><td>48</td><td>TH</td></tr>
-<tr style="background:rgba(239,83,80,.04)"><td style="font-weight:600;color:#ef5350">Primer Paralelo de Nómina (pruebas cálculos)</td><td>01/09/2026</td><td>30/09/2026</td><td>30</td><td>TH</td></tr>
-<tr style="background:rgba(239,83,80,.04)"><td style="font-weight:600;color:#ef5350">Segundo Paralelo de Nómina</td><td>01/10/2026</td><td>31/10/2026</td><td>31</td><td>TH</td></tr>
-<tr style="background:rgba(239,83,80,.04)"><td style="font-weight:600;color:#ef5350">Tercer Paralelo de Nómina</td><td>01/11/2026</td><td>30/11/2026</td><td>30</td><td>TH</td></tr>
-<tr style="background:rgba(255,167,38,.04)"><td style="font-weight:600;color:#ffa726">Carga Final de Datos y Corte</td><td>01/12/2026</td><td>31/12/2026</td><td>31</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Roles y perfiles de nómina</td><td>25/08/2026</td><td>31/08/2026</td><td>7</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Pruebas procesos no periódicos</td><td>01/12/2026</td><td>28/12/2026</td><td>28</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Config. Workflow Carta Oferta/Rel. Laborales/Onboarding</td><td>01/07/2026</td><td>31/07/2026</td><td>31</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Config. Workflow Off boarding</td><td>01/08/2026</td><td>31/08/2026</td><td>31</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Config. y pruebas Beneficios</td><td>01/08/2026</td><td>31/08/2026</td><td>31</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Reportería (Desprendible, contratos, certificaciones, txt bancos)</td><td>01/06/2026</td><td>31/08/2026</td><td>92</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Parametrización Contable</td><td>01/07/2026</td><td>28/09/2026</td><td>90</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Proceso nómina electrónica y PILA</td><td>30/11/2026</td><td>14/12/2026</td><td>15</td><td>TH</td></tr>
-<tr><td style="font-weight:600">Reportes personalizados</td><td>06/07/2026</td><td>31/08/2026</td><td>57</td><td>TH</td></tr>
-<tr style="background:rgba(76,175,80,.06)"><td style="font-weight:700;color:#4caf50">Salida a Producción (Go-Live)</td><td style="color:#4caf50;font-weight:700">15/12/2026</td><td style="color:#4caf50;font-weight:700">31/01/2027</td><td style="color:#4caf50;font-weight:700">48</td><td>TH</td></tr>
-</tbody>
-</table>
+<div class="gantt-container">
+<div class="gantt-grid">
+  <!-- HEADER -->
+  <div class="gantt-month" style="text-align:left;font-weight:700;color:#fff">Actividad</div>
+  <div class="gantt-month" style="background:rgba(66,165,245,.08)">JUN</div>
+  <div class="gantt-month" style="background:rgba(66,165,245,.06)">JUL</div>
+  <div class="gantt-month" style="background:rgba(66,165,245,.08)">AGO</div>
+  <div class="gantt-month" style="background:rgba(66,165,245,.06)">SEP</div>
+  <div class="gantt-month" style="background:rgba(66,165,245,.08)">OCT</div>
+  <div class="gantt-month" style="background:rgba(66,165,245,.06)">NOV</div>
+  <div class="gantt-month" style="background:rgba(66,165,245,.08)">DIC</div>
+  <div class="gantt-month" style="background:rgba(76,175,80,.08)">ENE 27</div>
 
-<h2>Definición Arquitectura Empresarial y Soluciones</h2>
-<p style="color:#7a8bb5;font-size:12px">01/06/2026 — 24/07/2026 (54 días) | Estado: En curso | Responsable: Arq / PO / TH</p>
-<table class="info-table">
-<thead><tr><th>Actividad</th><th>Inicio</th><th>Fin</th><th>Días</th></tr></thead>
-<tbody>
-<tr><td>Arquitectura empresarial + soluciones IDM</td><td>01/06/2026</td><td>26/06/2026</td><td>26</td></tr>
-<tr><td>Arquitectura Lago de Datos (SAGHI, Xplora, Terceros, Adebol/Fonb/Prést)</td><td>03/06/2026</td><td>26/06/2026</td><td>24</td></tr>
-<tr><td>Arquitectura Magneto</td><td>09/06/2026</td><td>26/06/2026</td><td>18</td></tr>
-<tr><td>Arquitectura Adebol / Fonbolivar / Préstamos</td><td>30/06/2026</td><td>10/07/2026</td><td>11</td></tr>
-<tr><td>Arquitectura Tronador / Tronador Santas</td><td>30/06/2026</td><td>10/07/2026</td><td>11</td></tr>
-<tr><td>Arquitectura SITRI, Aux Contables, SunSystem</td><td>13/07/2026</td><td>24/07/2026</td><td>12</td></tr>
-</tbody>
-</table>
+  <!-- PHASE: ENTREGABLES FUNCIONALES -->
+  <div class="gantt-phase-label" style="color:#4caf50;grid-column:1/-1;background:rgba(76,175,80,.05)">📋 ENTREGABLES FUNCIONALES (TH)</div>
 
-<h2>Desarrollo Integraciones</h2>
-<p style="color:#7a8bb5;font-size:12px">30/06/2026 — 30/09/2026 (93 días) | Estado: Por Iniciar</p>
-<table class="info-table">
-<thead><tr><th>Integración</th><th>Inicio</th><th>Fin</th><th>Días</th><th>Responsable</th></tr></thead>
-<tbody>
-<tr><td style="font-weight:600;color:#42a5f5">Lago de Datos - SAGHI</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Equipo TI SAGHI (W. Reinoso + D. Chavarrio)</td></tr>
-<tr><td style="font-weight:600;color:#4caf50">IDM</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Proveedor IDM</td></tr>
-<tr><td style="font-weight:600;color:#ffa726">Magneto</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Proveedor Magneto</td></tr>
-<tr><td style="font-weight:600;color:#42a5f5">Lago (Xplora, Terceros, Adebol/Fonb/Prést)</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Equipo TI Portales</td></tr>
-<tr><td style="font-weight:600;color:#7e57c2">Adebol</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Proveedor Linix</td></tr>
-<tr><td style="font-weight:600;color:#7e57c2">Fonbolivar</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Proveedor Linix</td></tr>
-<tr><td style="font-weight:600;color:#7e57c2">Préstamos</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Equipo TI Portales</td></tr>
-<tr><td style="font-weight:600;color:#ffa726">Tronador Tesorería</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Equipo TI Portales</td></tr>
-<tr><td style="font-weight:600;color:#ffa726">Tronador Santas</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Equipo TI Portales</td></tr>
-<tr><td style="font-weight:600;color:#ef5350">SunSystem (Archivo plano)</td><td>27/08/2026</td><td>30/09/2026</td><td>35</td><td>Equipo TI Portales</td></tr>
-<tr><td style="font-weight:600;color:#ef5350">SITRI (Archivo plano)</td><td>27/08/2026</td><td>30/09/2026</td><td>35</td><td>Equipo TI Portales</td></tr>
-<tr><td style="font-weight:600;color:#ef5350">Aux. Contables (Archivo plano)</td><td>27/08/2026</td><td>30/09/2026</td><td>35</td><td>Equipo TI Portales</td></tr>
-</tbody>
-</table>
+  <div class="gantt-row-label">Config Hub (subdominios, logos, roles)</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#4fc3f7"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#4fc3f7"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
 
-<h2>Pruebas Integraciones</h2>
-<p style="color:#7a8bb5;font-size:12px">17/07/2026 — 30/09/2026 | Responsable: QC</p>
-<table class="info-table">
-<thead><tr><th>Integración</th><th>Inicio</th><th>Fin</th><th>Responsable</th></tr></thead>
-<tbody>
-<tr><td>Lago SAGHI / IDM / Magneto / Lago Datos</td><td>17/07/2026</td><td>31/07/2026</td><td>QC</td></tr>
-<tr><td>Adebol / Fonbolivar / Préstamos / Tronador</td><td>13/08/2026</td><td>31/08/2026</td><td>QC</td></tr>
-<tr><td>SunSystem / SITRI / Aux. Contables</td><td>13/09/2026</td><td>30/09/2026</td><td>QC</td></tr>
-</tbody>
-</table>
+  <div class="gantt-row-label">Config Vacaciones (reglas, políticas)</div>
+  <div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#29b6f6"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:50%;background:#29b6f6"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Firma Digital</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#0288d1"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#0288d1"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#0288d1"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Parametrización empresas y contratos</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:60%;background:#4caf50"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Cargue info histórica contratos</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:50%;width:50%;background:#26a69a"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:66%;background:#26a69a"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Cargue nómina histórica (último año)</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:90%;width:10%;background:#7e57c2"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#7e57c2"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#7e57c2"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Diseño percepciones y descuentos</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#1976d2"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:10%;background:#1976d2"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Formulación conceptos y pruebas unitarias</div>
+  <div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#1565c0"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:55%;background:#1565c0"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label" style="color:#ef5350;font-weight:600">1er Paralelo Nómina</div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#ef5350"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label" style="color:#ef5350;font-weight:600">2do Paralelo Nómina</div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#d32f2f"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label" style="color:#ef5350;font-weight:600">3er Paralelo Nómina</div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#b71c1c"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label" style="color:#ffa726;font-weight:600">Carga Final Datos y Corte</div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#ffa726"></div></div>
+  <div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label" style="color:#4caf50;font-weight:700">🚀 Go-Live (Producción)</div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:50%;width:50%;background:#4caf50"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#4caf50"></div></div>
+
+  <!-- PHASE: ARQUITECTURA -->
+  <div class="gantt-phase-label" style="color:#1976d2;grid-column:1/-1;background:rgba(25,118,210,.05)">🏗️ ARQUITECTURA EMPRESARIAL Y SOLUCIONES</div>
+
+  <div class="gantt-row-label">Arq. IDM</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:85%;background:#42a5f5"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Arq. Lago Datos (SAGHI, Xplora, Terceros)</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:7%;width:78%;background:#1e88e5"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Arq. Magneto</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:27%;width:58%;background:#1565c0"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Arq. Adebol / Fonbolivar / Préstamos / Tronador</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:97%;width:3%;background:#0d47a1"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:33%;background:#0d47a1"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Arq. SITRI / Aux Contables / SunSystem</div>
+  <div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:38%;width:40%;background:#283593"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <!-- PHASE: DESARROLLO INTEGRACIONES -->
+  <div class="gantt-phase-label" style="color:#7e57c2;grid-column:1/-1;background:rgba(126,87,194,.05)">⚙️ DESARROLLO INTEGRACIONES</div>
+
+  <div class="gantt-row-label">Lago SAGHI / IDM / Magneto / Lago Datos</div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:97%;width:3%;background:#9575cd"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#9575cd"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">Adebol / Fonbolivar / Préstamos / Tronador</div>
+  <div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:38%;width:62%;background:#7e57c2"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#7e57c2"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+  <div class="gantt-row-label">SunSystem / SITRI / Aux Contables</div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:84%;width:16%;background:#5e35b1"></div></div>
+  <div class="gantt-row-cell"><div class="gantt-bar-item" style="left:0;width:100%;background:#5e35b1"></div></div>
+  <div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div><div class="gantt-row-cell"></div>
+
+</div><!-- end gantt-grid -->
+</div><!-- end gantt-container -->
 
 <div class="alert-card red">
-  <div class="alert-title">⚠️ Hito Crítico: Go-Live</div>
-  <p><strong>15/12/2026 — 31/01/2027.</strong> Después del tercer paralelo de nómina (Nov) y la carga final de datos (Dic), se activa la salida a producción. Contrato Oracle vence 06/02/2027.</p>
+  <div class="alert-title">⚠️ Hito Crítico: Go-Live 15/12/2026 — 31/01/2027</div>
+  <p>Después del tercer paralelo de nómina (Nov) y la carga final de datos (Dic), se activa producción. Contrato Oracle vence <strong>06/02/2027</strong>.</p>
 </div>
 
 </div>
