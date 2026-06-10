@@ -525,117 +525,93 @@ body{background:#080c22;color:#e0e0e0;font-family:'Segoe UI',system-ui,-apple-sy
 </div>
 </div>
 
-<!-- TAB 3: CRONOGRAMA -->
+<!-- TAB 3: CRONOGRAMA RANKMI -->
 <div id="tab-cronograma" class="tab-content">
 <div class="informe" style="max-width:1200px">
-<h1>PLAN DE TRABAJO — IMPLEMENTACIÓN RANKMI</h1>
-<p class="subtitle">Ejecución: 01/06/2026 — 30/09/2026 | Integraciones Ecosistema Nómina hacia Rankmi</p>
+<h1>CRONOGRAMA RANKMI — PLAN DE TRABAJO IMPLEMENTACIÓN</h1>
+<p class="subtitle">Ejecución: 01/06/2026 — 31/01/2027 | 3 frentes: Entregables Funcionales (TH) + Arquitectura + Desarrollo Integraciones</p>
 
-<!-- GANTT VISUAL -->
-<div style="background:#f5f7fa;border-radius:12px;padding:20px;margin:20px 0;overflow-x:auto">
+<!-- GANTT CHART CSS -->
+<style>.gantt-row{display:grid;grid-template-columns:240px 80px 80px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #1a2550;font-size:11px}.gantt-row:hover{background:rgba(100,181,246,.04)}.gantt-header{background:#111940;font-weight:600;color:#90caf9;padding:8px 0}.gantt-phase{background:rgba(100,181,246,.06);font-weight:700;color:#64b5f6;padding:4px 0}.gantt-bar{height:14px;border-radius:3px;position:absolute;top:50%;transform:translateY(-50%)}.gantt-timeline{position:relative;height:100%}</style>
 
-<!-- HEADER MESES -->
-<table style="width:100%;border-collapse:collapse;min-width:900px">
-<thead>
-<tr>
-  <th style="width:220px;background:#e2e8f0;padding:10px;text-align:left;font-size:12px;color:#2d3748;border-radius:6px 0 0 0">Plan de Trabajo</th>
-  <th style="width:30px;background:#e2e8f0;padding:6px;text-align:center;font-size:10px;color:#4a5568">Inicio</th>
-  <th style="width:30px;background:#e2e8f0;padding:6px;text-align:center;font-size:10px;color:#4a5568">Fin</th>
-  <th colspan="4" style="background:#dbeafe;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#1e40af;border-left:2px solid #fff">JUN 2026</th>
-  <th colspan="5" style="background:#c7d2fe;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#3730a3;border-left:2px solid #fff">JUL 2026</th>
-  <th colspan="4" style="background:#a5b4fc;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#312e81;border-left:2px solid #fff">AGO 2026</th>
-  <th colspan="4" style="background:#818cf8;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#fff;border-left:2px solid #fff;border-radius:0 6px 0 0">SEP 2026</th>
-</tr>
-<tr>
-  <th style="background:#f1f5f9;padding:4px"></th>
-  <th style="background:#f1f5f9;padding:4px"></th>
-  <th style="background:#f1f5f9;padding:4px"></th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S1</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S2</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S3</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S4</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S5</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S6</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S7</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S8</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S9</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S10</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S11</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S12</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S13</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S14</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S15</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S16</th>
-  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S17</th>
-</tr>
-</thead>
+<h2>Entregables Funcionales (TH)</h2>
+<table class="info-table">
+<thead><tr><th>Actividad</th><th>Inicio</th><th>Fin</th><th>Días</th><th>Resp.</th></tr></thead>
 <tbody>
-<!-- FASE 1: ARQUITECTURA -->
-<tr><td colspan="20" style="padding:10px 8px 4px;font-size:13px;font-weight:700;color:#1e40af;background:#eff6ff;border-top:2px solid #3b82f6">Definición Arquitectura Empresarial y Soluciones <span style="font-weight:400;color:#64748b;font-size:11px">(01/06 — 24/07)</span></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. IDM (Empresarial + Soluciones)</td><td style="font-size:10px;color:#6b7280;text-align:center">01/06</td><td style="font-size:10px;color:#6b7280;text-align:center">26/06</td><td colspan="4" style="padding:4px"><div style="background:linear-gradient(90deg,#60a5fa,#3b82f6);height:14px;border-radius:4px;width:100%"></div></td><td colspan="13"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Lago de Datos (SAGHI, Xplora, Terceros)</td><td style="font-size:10px;color:#6b7280;text-align:center">03/06</td><td style="font-size:10px;color:#6b7280;text-align:center">26/06</td><td colspan="4" style="padding:4px"><div style="background:linear-gradient(90deg,#38bdf8,#0ea5e9);height:14px;border-radius:4px;width:95%"></div></td><td colspan="13"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Magneto</td><td style="font-size:10px;color:#6b7280;text-align:center">09/06</td><td style="font-size:10px;color:#6b7280;text-align:center">26/06</td><td></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#22d3ee,#06b6d4);height:14px;border-radius:4px;width:100%"></div></td><td colspan="13"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Adebol / Fonbolivar / Préstamos</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">10/07</td><td colspan="4"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#818cf8,#6366f1);height:14px;border-radius:4px;width:100%"></div></td><td colspan="11"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Tronador / Tronador Santas</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">10/07</td><td colspan="4"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#a78bfa,#7c3aed);height:14px;border-radius:4px;width:100%"></div></td><td colspan="11"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. SITRI / Aux. Contables / SunSystem</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">24/07</td><td colspan="6"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#c084fc,#a855f7);height:14px;border-radius:4px;width:100%"></div></td><td colspan="9"></td></tr>
-
-<!-- FASE 2: DESARROLLO -->
-<tr><td colspan="20" style="padding:10px 8px 4px;font-size:13px;font-weight:700;color:#7c3aed;background:#f5f3ff;border-top:2px solid #7c3aed">Desarrollo Integraciones <span style="font-weight:400;color:#64748b;font-size:11px">(30/06 — 12/09)</span></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Lago de Datos - SAGHI</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#60a5fa,#2563eb);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">IDM</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#38bdf8,#0284c7);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Magneto</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#22d3ee,#0891b2);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Lago (Xplora, Terceros, Adebol/Fonb/Prést)</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#67e8f9,#06b6d4);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Adebol</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#818cf8,#4f46e5);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Fonbolivar</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#a78bfa,#6d28d9);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Préstamos</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#c4b5fd,#7c3aed);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Tronador Tesorería</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#1e3a5f,#1e40af);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Tronador Santas</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#1e3a8a,#312e81);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">SunSystem (archivo plano)</td><td style="font-size:10px;color:#6b7280;text-align:center">27/08</td><td style="font-size:10px;color:#6b7280;text-align:center">12/09</td><td colspan="11"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#475569,#1e293b);height:14px;border-radius:4px;width:100%"></div></td><td colspan="3"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">SITRI (archivo plano)</td><td style="font-size:10px;color:#6b7280;text-align:center">27/08</td><td style="font-size:10px;color:#6b7280;text-align:center">12/09</td><td colspan="11"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#64748b,#334155);height:14px;border-radius:4px;width:100%"></div></td><td colspan="3"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Aux. Contables (archivo plano)</td><td style="font-size:10px;color:#6b7280;text-align:center">27/08</td><td style="font-size:10px;color:#6b7280;text-align:center">12/09</td><td colspan="11"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#94a3b8,#475569);height:14px;border-radius:4px;width:100%"></div></td><td colspan="3"></td></tr>
-
-<!-- FASE 3: PRUEBAS -->
-<tr><td colspan="20" style="padding:10px 8px 4px;font-size:13px;font-weight:700;color:#c2410c;background:#fff7ed;border-top:2px solid #ea580c">Pruebas Integraciones <span style="font-weight:400;color:#64748b;font-size:11px">(17/07 — 30/09)</span></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Lago SAGHI / IDM / Magneto / Lago Datos</td><td style="font-size:10px;color:#6b7280;text-align:center">17/07</td><td style="font-size:10px;color:#6b7280;text-align:center">31/07</td><td colspan="7"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#fb923c,#ea580c);height:14px;border-radius:4px;width:100%"></div></td><td colspan="8"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Adebol / Fonbolivar / Préstamos</td><td style="font-size:10px;color:#6b7280;text-align:center">13/08</td><td style="font-size:10px;color:#6b7280;text-align:center">31/08</td><td colspan="10"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#f97316,#c2410c);height:14px;border-radius:4px;width:100%"></div></td><td colspan="4"></td></tr>
-
-<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Tronador Tesorería / Santas</td><td style="font-size:10px;color:#6b7280;text-align:center">13/08</td><td style="font-size:10px;color:#6b7280;text-align:center">31/08</td><td colspan="10"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#ef4444,#b91c1c);height:14px;border-radius:4px;width:100%"></div></td><td colspan="4"></td></tr>
-
-<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">SunSystem / SITRI / Aux. Contables</td><td style="font-size:10px;color:#6b7280;text-align:center">13/09</td><td style="font-size:10px;color:#6b7280;text-align:center">30/09</td><td colspan="14"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#7c3aed,#4c1d95);height:14px;border-radius:4px;width:100%"></div></td></tr>
-
+<tr><td style="font-weight:600">Configuración Hub (Subdominios, logos, roles)</td><td>01/06/2026</td><td>31/07/2026</td><td>61</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Configuración Vacaciones (reglas, políticas, cálculos, histórica)</td><td>01/07/2026</td><td>14/08/2026</td><td>45</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Firma Digital</td><td>01/06/2026</td><td>31/08/2026</td><td>92</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Parametrización empresas y contratos</td><td>01/06/2026</td><td>19/06/2026</td><td>19</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Cargue información histórica contratos</td><td>16/06/2026</td><td>20/07/2026</td><td>35</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Cargue nómina histórica (último año)</td><td>29/06/2026</td><td>31/08/2026</td><td>64</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Diseño percepciones y descuentos nómina</td><td>01/06/2026</td><td>03/07/2026</td><td>33</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Formulación conceptos y pruebas unitarias</td><td>01/07/2026</td><td>17/08/2026</td><td>48</td><td>TH</td></tr>
+<tr style="background:rgba(239,83,80,.04)"><td style="font-weight:600;color:#ef5350">Primer Paralelo de Nómina (pruebas cálculos)</td><td>01/09/2026</td><td>30/09/2026</td><td>30</td><td>TH</td></tr>
+<tr style="background:rgba(239,83,80,.04)"><td style="font-weight:600;color:#ef5350">Segundo Paralelo de Nómina</td><td>01/10/2026</td><td>31/10/2026</td><td>31</td><td>TH</td></tr>
+<tr style="background:rgba(239,83,80,.04)"><td style="font-weight:600;color:#ef5350">Tercer Paralelo de Nómina</td><td>01/11/2026</td><td>30/11/2026</td><td>30</td><td>TH</td></tr>
+<tr style="background:rgba(255,167,38,.04)"><td style="font-weight:600;color:#ffa726">Carga Final de Datos y Corte</td><td>01/12/2026</td><td>31/12/2026</td><td>31</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Roles y perfiles de nómina</td><td>25/08/2026</td><td>31/08/2026</td><td>7</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Pruebas procesos no periódicos</td><td>01/12/2026</td><td>28/12/2026</td><td>28</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Config. Workflow Carta Oferta/Rel. Laborales/Onboarding</td><td>01/07/2026</td><td>31/07/2026</td><td>31</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Config. Workflow Off boarding</td><td>01/08/2026</td><td>31/08/2026</td><td>31</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Config. y pruebas Beneficios</td><td>01/08/2026</td><td>31/08/2026</td><td>31</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Reportería (Desprendible, contratos, certificaciones, txt bancos)</td><td>01/06/2026</td><td>31/08/2026</td><td>92</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Parametrización Contable</td><td>01/07/2026</td><td>28/09/2026</td><td>90</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Proceso nómina electrónica y PILA</td><td>30/11/2026</td><td>14/12/2026</td><td>15</td><td>TH</td></tr>
+<tr><td style="font-weight:600">Reportes personalizados</td><td>06/07/2026</td><td>31/08/2026</td><td>57</td><td>TH</td></tr>
+<tr style="background:rgba(76,175,80,.06)"><td style="font-weight:700;color:#4caf50">Salida a Producción (Go-Live)</td><td style="color:#4caf50;font-weight:700">15/12/2026</td><td style="color:#4caf50;font-weight:700">31/01/2027</td><td style="color:#4caf50;font-weight:700">48</td><td>TH</td></tr>
 </tbody>
 </table>
 
-<!-- RESPONSABLES -->
-<div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;font-size:11px">
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#3b82f6;border-radius:50%"></div>Arquitectura / PO / TH</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#7c3aed;border-radius:50%"></div>Equipo TI Portales</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#0ea5e9;border-radius:50%"></div>Equipo TI SAGHI</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#06b6d4;border-radius:50%"></div>Proveedor IDM / Magneto / Linix</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#ea580c;border-radius:50%"></div>QC (Pruebas)</div>
-</div>
+<h2>Definición Arquitectura Empresarial y Soluciones</h2>
+<p style="color:#7a8bb5;font-size:12px">01/06/2026 — 24/07/2026 (54 días) | Estado: En curso | Responsable: Arq / PO / TH</p>
+<table class="info-table">
+<thead><tr><th>Actividad</th><th>Inicio</th><th>Fin</th><th>Días</th></tr></thead>
+<tbody>
+<tr><td>Arquitectura empresarial + soluciones IDM</td><td>01/06/2026</td><td>26/06/2026</td><td>26</td></tr>
+<tr><td>Arquitectura Lago de Datos (SAGHI, Xplora, Terceros, Adebol/Fonb/Prést)</td><td>03/06/2026</td><td>26/06/2026</td><td>24</td></tr>
+<tr><td>Arquitectura Magneto</td><td>09/06/2026</td><td>26/06/2026</td><td>18</td></tr>
+<tr><td>Arquitectura Adebol / Fonbolivar / Préstamos</td><td>30/06/2026</td><td>10/07/2026</td><td>11</td></tr>
+<tr><td>Arquitectura Tronador / Tronador Santas</td><td>30/06/2026</td><td>10/07/2026</td><td>11</td></tr>
+<tr><td>Arquitectura SITRI, Aux Contables, SunSystem</td><td>13/07/2026</td><td>24/07/2026</td><td>12</td></tr>
+</tbody>
+</table>
 
-</div><!-- end gantt -->
+<h2>Desarrollo Integraciones</h2>
+<p style="color:#7a8bb5;font-size:12px">30/06/2026 — 30/09/2026 (93 días) | Estado: Por Iniciar</p>
+<table class="info-table">
+<thead><tr><th>Integración</th><th>Inicio</th><th>Fin</th><th>Días</th><th>Responsable</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:600;color:#42a5f5">Lago de Datos - SAGHI</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Equipo TI SAGHI (W. Reinoso + D. Chavarrio)</td></tr>
+<tr><td style="font-weight:600;color:#4caf50">IDM</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Proveedor IDM</td></tr>
+<tr><td style="font-weight:600;color:#ffa726">Magneto</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Proveedor Magneto</td></tr>
+<tr><td style="font-weight:600;color:#42a5f5">Lago (Xplora, Terceros, Adebol/Fonb/Prést)</td><td>30/06/2026</td><td>31/07/2026</td><td>32</td><td>Equipo TI Portales</td></tr>
+<tr><td style="font-weight:600;color:#7e57c2">Adebol</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Proveedor Linix</td></tr>
+<tr><td style="font-weight:600;color:#7e57c2">Fonbolivar</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Proveedor Linix</td></tr>
+<tr><td style="font-weight:600;color:#7e57c2">Préstamos</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Equipo TI Portales</td></tr>
+<tr><td style="font-weight:600;color:#ffa726">Tronador Tesorería</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Equipo TI Portales</td></tr>
+<tr><td style="font-weight:600;color:#ffa726">Tronador Santas</td><td>13/07/2026</td><td>31/08/2026</td><td>50</td><td>Equipo TI Portales</td></tr>
+<tr><td style="font-weight:600;color:#ef5350">SunSystem (Archivo plano)</td><td>27/08/2026</td><td>30/09/2026</td><td>35</td><td>Equipo TI Portales</td></tr>
+<tr><td style="font-weight:600;color:#ef5350">SITRI (Archivo plano)</td><td>27/08/2026</td><td>30/09/2026</td><td>35</td><td>Equipo TI Portales</td></tr>
+<tr><td style="font-weight:600;color:#ef5350">Aux. Contables (Archivo plano)</td><td>27/08/2026</td><td>30/09/2026</td><td>35</td><td>Equipo TI Portales</td></tr>
+</tbody>
+</table>
+
+<h2>Pruebas Integraciones</h2>
+<p style="color:#7a8bb5;font-size:12px">17/07/2026 — 30/09/2026 | Responsable: QC</p>
+<table class="info-table">
+<thead><tr><th>Integración</th><th>Inicio</th><th>Fin</th><th>Responsable</th></tr></thead>
+<tbody>
+<tr><td>Lago SAGHI / IDM / Magneto / Lago Datos</td><td>17/07/2026</td><td>31/07/2026</td><td>QC</td></tr>
+<tr><td>Adebol / Fonbolivar / Préstamos / Tronador</td><td>13/08/2026</td><td>31/08/2026</td><td>QC</td></tr>
+<tr><td>SunSystem / SITRI / Aux. Contables</td><td>13/09/2026</td><td>30/09/2026</td><td>QC</td></tr>
+</tbody>
+</table>
+
+<div class="alert-card red">
+  <div class="alert-title">⚠️ Hito Crítico: Go-Live</div>
+  <p><strong>15/12/2026 — 31/01/2027.</strong> Después del tercer paralelo de nómina (Nov) y la carga final de datos (Dic), se activa la salida a producción. Contrato Oracle vence 06/02/2027.</p>
+</div>
 
 </div>
 </div>
