@@ -210,184 +210,315 @@ body{background:#080c22;color:#e0e0e0;font-family:'Segoe UI',system-ui,-apple-sy
 
 <!-- TAB 2: ARQUITECTURA -->
 <div id="tab-arquitectura" class="tab-content">
-<div style="width:100%;height:100%;position:relative;overflow:auto;padding:20px">
-<div style="max-width:1200px;margin:0 auto">
+<div class="informe" style="max-width:1200px">
+<h1>ARQUITECTURA — ECOSISTEMA NÓMINA</h1>
+<p class="subtitle">3 vistas: AS IS (Pipol actual) → TO BE (Rankmi reemplazo) → Estrangulación (SAGHI componentes C4)</p>
 
-<h1 style="color:#fff;font-size:20px;margin-bottom:4px">DIAGRAMA INTEGRACIONES ECOSISTEMA NÓMINA — TO BE RANKMI</h1>
-<p style="color:#7a8bb5;font-size:12px;margin-bottom:24px">Representación detallada de las integraciones que se deben garantizar con el ecosistema de Nómina</p>
+<!-- ========== 1. AS IS PIPOL ========== -->
+<h2>1. Arquitectura AS IS — Pipol (Estado Actual)</h2>
+<p style="color:#7a8bb5;font-size:12px;margin-bottom:16px">Ecosistema fragmentado: HCM Cloud + PeopleSoft 9.2 + SAGHI + sistemas Legacy. Dependencia total de Davivienda (OIC + GAW).</p>
 
-<div style="width:100%;overflow-x:auto">
-<svg viewBox="0 0 1100 980" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:900px;height:auto;font-family:'Segoe UI',system-ui,sans-serif">
-  <rect width="1100" height="980" fill="#fafbfc"/>
+<div style="width:100%;overflow-x:auto;margin:16px 0">
+<svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:800px;height:auto;font-family:'Segoe UI',system-ui,sans-serif">
+  <rect width="1000" height="480" fill="#fafbfc" rx="8"/>
 
-  <!-- RANKMI central -->
-  <rect x="60" y="380" width="150" height="75" rx="8" fill="#1976d2" stroke="#0d47a1" stroke-width="2"/>
-  <text x="135" y="412" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">RANKMI</text>
-  <text x="135" y="432" text-anchor="middle" fill="#bbdefb" font-size="9">SaaS Nómina</text>
-  <circle cx="60" cy="500" r="10" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
-
-  <!-- Companies -->
-  <text x="20" y="530" fill="#333" font-size="8" font-weight="600">Compañías:</text>
-  <text x="20" y="542" fill="#555" font-size="7">- Capitalizadora Bolívar SA</text>
-  <text x="20" y="552" fill="#555" font-size="7">- Cía de Seguros Bolívar SA</text>
-  <text x="20" y="562" fill="#555" font-size="7">- Seguros Comerciales Bolívar SA</text>
-  <text x="20" y="572" fill="#555" font-size="7">- Inv y Cobranzas El Libertador SA</text>
-  <text x="20" y="582" fill="#555" font-size="7">- Servicios Bolívar SA / Facilities</text>
-  <text x="20" y="592" fill="#555" font-size="7">- Salud Bolívar IPS / EPS</text>
-  <text x="20" y="602" fill="#555" font-size="7">- Grupo Bolívar S.A</text>
-  <text x="20" y="612" fill="#555" font-size="7">- Fundación Cultiva El Arte</text>
+  <!-- Usuarios -->
+  <text x="130" y="30" text-anchor="middle" fill="#333" font-size="10">👤 Davivienda</text>
+  <text x="320" y="30" text-anchor="middle" fill="#333" font-size="10">👤 Seguros Bolívar</text>
+  <text x="510" y="30" text-anchor="middle" fill="#333" font-size="10">👤 Constructora Bolívar</text>
 
   <!-- IDM -->
-  <rect x="380" y="30" width="110" height="36" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
-  <text x="435" y="50" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">IDM</text>
-  <text x="435" y="60" text-anchor="middle" fill="#777" font-size="7">(Directorio Activo)</text>
-  <line x1="210" y1="390" x2="380" y2="48" stroke="#1976d2" stroke-width="1"/>
-  <text x="250" y="35" fill="#333" font-size="7">Cada 1h - Altas/Modif/Bajas</text>
-  <text x="500" y="50" fill="#555" font-size="7">→ Crea usuario, envía correo elect laboral</text>
+  <rect x="270" y="45" width="100" height="30" rx="5" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="320" y="64" text-anchor="middle" fill="#333" font-size="10" font-weight="600">IDM</text>
+  <line x1="130" y1="38" x2="270" y2="55" stroke="#666" stroke-width="1"/>
+  <line x1="510" y1="38" x2="370" y2="55" stroke="#666" stroke-width="1"/>
 
-  <!-- Filenet -->
-  <rect x="380" y="78" width="110" height="30" rx="5" fill="#fff" stroke="#ff9800" stroke-width="1.5"/>
-  <text x="435" y="97" text-anchor="middle" fill="#e65100" font-size="10" font-weight="600">Filenet</text>
-  <line x1="210" y1="393" x2="380" y2="93" stroke="#ff9800" stroke-width="1" stroke-dasharray="3"/>
-  <text x="500" y="97" fill="#555" font-size="7">→ Gestor documental, revisar copia respaldo</text>
+  <!-- HCM Cloud -->
+  <rect x="170" y="100" width="140" height="50" rx="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="240" y="122" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="700">HCM CLOUD</text>
+  <text x="240" y="137" text-anchor="middle" fill="#555" font-size="8">Contratación, Ausencias</text>
+  <line x1="320" y1="75" x2="240" y2="100" stroke="#4caf50" stroke-width="1"/>
+
+  <!-- OIC Arrow -->
+  <line x1="310" y1="125" x2="420" y2="125" stroke="#ef5350" stroke-width="2" marker-end="url(#arAS)"/>
+  <line x1="420" y1="130" x2="310" y2="130" stroke="#ef5350" stroke-width="2" marker-end="url(#arAS)"/>
+  <text x="365" y="118" text-anchor="middle" fill="#ef5350" font-size="8" font-weight="600">OIC 15min</text>
+  <text x="365" y="143" text-anchor="middle" fill="#777" font-size="7">API cada 15 min</text>
+
+  <!-- PeopleSoft 9.2 -->
+  <rect x="420" y="95" width="180" height="60" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="510" y="120" text-anchor="middle" fill="#e65100" font-size="11" font-weight="700">PEOPLESOFT 9.2</text>
+  <text x="510" y="137" text-anchor="middle" fill="#555" font-size="8">Nómina + Seg. Social</text>
+  <text x="510" y="148" text-anchor="middle" fill="#ef5350" font-size="7">(Davivienda - vence 02/2027)</text>
 
   <!-- SAGHI -->
-  <rect x="380" y="120" width="110" height="30" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
-  <text x="435" y="139" text-anchor="middle" fill="#e65100" font-size="10" font-weight="600">SAGHI</text>
-  <rect x="495" y="126" width="25" height="13" rx="3" fill="#4caf50"/><text x="507" y="136" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
-  <line x1="210" y1="396" x2="380" y2="135" stroke="#e65100" stroke-width="1"/>
-  <text x="530" y="139" fill="#555" font-size="7">→ Validar solución con Préstamos (crear servicio/archivo)</text>
+  <rect x="660" y="100" width="120" height="45" rx="8" fill="#fce4ec" stroke="#e91e63" stroke-width="1.5"/>
+  <text x="720" y="122" text-anchor="middle" fill="#880e4f" font-size="11" font-weight="700">SAGHI</text>
+  <text x="720" y="137" text-anchor="middle" fill="#555" font-size="8">Intermediarios</text>
+  <line x1="600" y1="125" x2="660" y2="122" stroke="#e91e63" stroke-width="1"/>
 
-  <!-- Préstamos -->
-  <rect x="380" y="162" width="110" height="30" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
-  <text x="435" y="181" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Préstamos</text>
-  <rect x="495" y="168" width="25" height="13" rx="3" fill="#4caf50"/><text x="507" y="178" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
-  <line x1="210" y1="400" x2="380" y2="177" stroke="#1976d2" stroke-width="1"/>
-  <text x="220" y="165" fill="#333" font-size="7">Novedades Nómina / WS Saldos Liquidación</text>
+  <!-- Legacy box -->
+  <rect x="830" y="85" width="150" height="130" rx="6" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="905" y="102" text-anchor="middle" fill="#333" font-size="9" font-weight="600">LEGACY</text>
+  <text x="905" y="116" fill="#555" font-size="7" text-anchor="middle">Terceros / Comisiones</text>
+  <text x="905" y="128" fill="#555" font-size="7" text-anchor="middle">Consolidador SBR</text>
+  <text x="905" y="140" fill="#555" font-size="7" text-anchor="middle">Core Seguros / Tronador</text>
+  <text x="905" y="152" fill="#555" font-size="7" text-anchor="middle">Fuerza de ventas</text>
+  <text x="905" y="164" fill="#555" font-size="7" text-anchor="middle">Portal mi compañía</text>
+  <text x="905" y="176" fill="#555" font-size="7" text-anchor="middle">Prestamos Seguro</text>
+  <text x="905" y="188" fill="#555" font-size="7" text-anchor="middle">Simon cotizadores</text>
+  <text x="905" y="200" fill="#555" font-size="7" text-anchor="middle">Siebel CRM / Intranet</text>
+  <line x1="780" y1="122" x2="830" y2="130" stroke="#9e9e9e" stroke-width="1"/>
 
-  <!-- Tesorería Tronador -->
-  <rect x="380" y="205" width="140" height="36" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
-  <text x="450" y="222" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Tesorería Tronador</text>
-  <text x="450" y="234" text-anchor="middle" fill="#777" font-size="7">Santas (50 Grupo Bolívar)</text>
-  <line x1="210" y1="405" x2="380" y2="223" stroke="#1976d2" stroke-width="1"/>
-  <text x="220" y="210" fill="#333" font-size="7">WS Órdenes de Pago / Cuentas Bancarias</text>
-  <text x="530" y="222" fill="#555" font-size="7">→ Depende código cía para BD Tronador o Santas</text>
+  <!-- HCM connections down -->
+  <text x="80" y="185" fill="#333" font-size="9" font-weight="600">HCM Cloud conecta a:</text>
+  <rect x="50" y="195" width="100" height="22" rx="4" fill="#e3f2fd" stroke="#1976d2"/><text x="100" y="210" text-anchor="middle" fill="#1565c0" font-size="8">IDM</text>
+  <rect x="160" y="195" width="100" height="22" rx="4" fill="#e3f2fd" stroke="#1976d2"/><text x="210" y="210" text-anchor="middle" fill="#1565c0" font-size="8">SAGHI</text>
+  <rect x="270" y="195" width="100" height="22" rx="4" fill="#e3f2fd" stroke="#1976d2"/><text x="320" y="210" text-anchor="middle" fill="#1565c0" font-size="8">Xplora</text>
+  <rect x="50" y="225" width="100" height="22" rx="4" fill="#e3f2fd" stroke="#1976d2"/><text x="100" y="240" text-anchor="middle" fill="#1565c0" font-size="8">Lago Datos (OIC)</text>
+  <rect x="160" y="225" width="100" height="22" rx="4" fill="#e3f2fd" stroke="#1976d2"/><text x="210" y="240" text-anchor="middle" fill="#1565c0" font-size="8">Terceros</text>
+  <rect x="270" y="225" width="100" height="22" rx="4" fill="#e3f2fd" stroke="#1976d2"/><text x="320" y="240" text-anchor="middle" fill="#1565c0" font-size="8">Tronador</text>
+  <rect x="380" y="225" width="100" height="22" rx="4" fill="#fff8e1" stroke="#f57c00"/><text x="430" y="240" text-anchor="middle" fill="#e65100" font-size="8">Magneto 365</text>
 
-  <!-- Adebol -->
-  <rect x="380" y="253" width="100" height="30" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
-  <text x="430" y="272" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Adebol</text>
-  <line x1="210" y1="410" x2="380" y2="268" stroke="#1976d2" stroke-width="1"/>
-  <text x="220" y="255" fill="#333" font-size="7">Archivo Plano Info Contratos / Novedades</text>
-  <text x="490" y="272" fill="#555" font-size="7">→ Revisar mejora servicios y/o archivos planos</text>
+  <!-- PeopleSoft connections -->
+  <text x="500" y="185" fill="#333" font-size="9" font-weight="600">PeopleSoft 9.2 conecta a:</text>
+  <rect x="420" y="265" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="467" y="280" text-anchor="middle" fill="#e65100" font-size="8">Adebol</text>
+  <rect x="525" y="265" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="572" y="280" text-anchor="middle" fill="#e65100" font-size="8">Fonbolivar</text>
+  <rect x="630" y="265" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="677" y="280" text-anchor="middle" fill="#e65100" font-size="8">Préstamos</text>
 
-  <!-- Fonbolivar -->
-  <rect x="380" y="295" width="100" height="30" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
-  <text x="430" y="314" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Fonbolivar</text>
-  <line x1="210" y1="415" x2="380" y2="310" stroke="#1976d2" stroke-width="1"/>
+  <rect x="420" y="295" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="467" y="310" text-anchor="middle" fill="#e65100" font-size="8">SunSystem</text>
+  <rect x="525" y="295" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="572" y="310" text-anchor="middle" fill="#e65100" font-size="8">Aux Contables</text>
+  <rect x="630" y="295" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="677" y="310" text-anchor="middle" fill="#e65100" font-size="8">SITRI</text>
 
-  <!-- Lago de Datos -->
-  <rect x="380" y="340" width="130" height="36" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="445" y="360" text-anchor="middle" fill="#1565c0" font-size="10" font-weight="600">Lago de Datos</text>
-  <line x1="210" y1="420" x2="380" y2="358" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="220" y="345" fill="#333" font-size="7">Nueva App / Consume data / WS HCM / Info contratación</text>
+  <rect x="420" y="325" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="467" y="340" text-anchor="middle" fill="#e65100" font-size="8">DAVIVIENDA</text>
+  <rect x="525" y="325" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="572" y="340" text-anchor="middle" fill="#e65100" font-size="8">AFC</text>
+  <rect x="630" y="325" width="95" height="22" rx="4" fill="#fff3e0" stroke="#ff9800"/><text x="677" y="340" text-anchor="middle" fill="#e65100" font-size="8">CAI</text>
 
-  <!-- Magneto 365 -->
-  <rect x="580" y="320" width="110" height="30" rx="5" fill="#fff8e1" stroke="#f57c00" stroke-width="1.5"/>
-  <text x="635" y="339" text-anchor="middle" fill="#e65100" font-size="10" font-weight="600">Magneto 365</text>
-  <line x1="510" y1="350" x2="580" y2="335" stroke="#f57c00" stroke-width="1"/>
-  <text x="700" y="333" fill="#555" font-size="7">→ Revisar info al Lago, validar suficiencia</text>
+  <rect x="420" y="355" width="95" height="22" rx="4" fill="#f5f5f5" stroke="#9e9e9e"/><text x="467" y="370" text-anchor="middle" fill="#555" font-size="8">Chat Boot</text>
+  <rect x="525" y="355" width="95" height="22" rx="4" fill="#f5f5f5" stroke="#9e9e9e"/><text x="572" y="370" text-anchor="middle" fill="#555" font-size="8">IDM</text>
+  <rect x="630" y="355" width="95" height="22" rx="4" fill="#f5f5f5" stroke="#9e9e9e"/><text x="677" y="370" text-anchor="middle" fill="#555" font-size="8">Factura 1</text>
 
-  <!-- Xplora -->
-  <rect x="580" y="358" width="90" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
-  <text x="625" y="375" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">Xplora</text>
-  <rect x="675" y="362" width="25" height="13" rx="3" fill="#4caf50"/><text x="687" y="372" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
-  <line x1="510" y1="358" x2="580" y2="371" stroke="#1976d2" stroke-width="1"/>
-  <text x="710" y="375" fill="#555" font-size="7">→ Revisar posibilidad API vs Archivo Plano</text>
+  <!-- Novedades Nómina arrows -->
+  <text x="510" y="400" text-anchor="middle" fill="#ef5350" font-size="9" font-weight="600">⚠ Novedades Nómina via GAW Davivienda — Fallas mensuales</text>
 
-  <!-- Terceros -->
-  <rect x="580" y="392" width="90" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
-  <text x="625" y="409" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">Terceros</text>
-  <rect x="675" y="396" width="25" height="13" rx="3" fill="#4caf50"/><text x="687" y="406" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
-  <line x1="510" y1="365" x2="580" y2="405" stroke="#1976d2" stroke-width="1"/>
-  <text x="710" y="409" fill="#555" font-size="7">→ Revisar info Terceros ingestando en Lago</text>
+  <!-- Bottom info -->
+  <rect x="50" y="420" width="900" height="45" rx="6" fill="rgba(239,83,80,.05)" stroke="rgba(239,83,80,.3)"/>
+  <text x="500" y="440" text-anchor="middle" fill="#ef5350" font-size="10" font-weight="600">PROBLEMAS: 40% fallas HCM↔PeopleSoft | 2h procesamiento nómina | 23 integraciones (5 críticas) | Dependencia total Oracle/Davivienda</text>
+  <text x="500" y="455" text-anchor="middle" fill="#777" font-size="9">Contrato Oracle vence 06/02/2027 — Sin renovación</text>
 
-  <!-- CAI -->
-  <rect x="580" y="426" width="90" height="26" rx="5" fill="#fff8e1" stroke="#f57c00" stroke-width="1.2"/>
-  <text x="625" y="440" text-anchor="middle" fill="#e65100" font-size="9" font-weight="600">CAI</text>
-  <text x="625" y="449" text-anchor="middle" fill="#f57c00" font-size="7">Activos?</text>
-  <line x1="510" y1="370" x2="580" y2="439" stroke="#f57c00" stroke-width="1" stroke-dasharray="3"/>
-  <text x="680" y="443" fill="#555" font-size="7">→ Revisar gestión Activos (Gerencia Adm.)</text>
-
-  <!-- SunSystem -->
-  <rect x="380" y="470" width="110" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
-  <text x="435" y="487" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">SunSystem</text>
-  <rect x="495" y="474" width="25" height="13" rx="3" fill="#4caf50"/><text x="507" y="484" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
-  <line x1="210" y1="430" x2="380" y2="483" stroke="#1976d2" stroke-width="1"/>
-  <text x="530" y="487" fill="#555" font-size="7">→ Estructura documentada</text>
-
-  <!-- Aux Contables -->
-  <rect x="380" y="505" width="130" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
-  <text x="445" y="522" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">Auxiliares Contables</text>
-  <rect x="515" y="509" width="25" height="13" rx="3" fill="#4caf50"/><text x="527" y="519" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
-  <line x1="210" y1="435" x2="380" y2="518" stroke="#1976d2" stroke-width="1"/>
-  <text x="550" y="522" fill="#555" font-size="7">→ Estructura documentada</text>
-
-  <!-- SITRI -->
-  <rect x="380" y="540" width="90" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
-  <text x="425" y="557" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">SITRI</text>
-  <line x1="210" y1="440" x2="380" y2="553" stroke="#1976d2" stroke-width="1"/>
-  <text x="480" y="557" fill="#555" font-size="7">→ Estructura documentada</text>
-
-  <!-- DAVIVIENDA CriptoVault -->
-  <rect x="380" y="580" width="140" height="30" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="450" y="595" text-anchor="middle" fill="#2e7d32" font-size="9" font-weight="600">DAVIVIENDA CriptoVault</text>
-  <text x="450" y="605" text-anchor="middle" fill="#4caf50" font-size="7">(Centralizador)</text>
-  <line x1="210" y1="445" x2="380" y2="595" stroke="#2e7d32" stroke-width="1"/>
-  <text x="530" y="595" fill="#555" font-size="7">→ Estructura documentada</text>
-
-  <!-- AFC -->
-  <rect x="380" y="620" width="100" height="30" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="430" y="635" text-anchor="middle" fill="#2e7d32" font-size="9" font-weight="600">AFC</text>
-  <text x="430" y="645" text-anchor="middle" fill="#4caf50" font-size="7">(Centralizador)</text>
-  <line x1="210" y1="448" x2="380" y2="635" stroke="#2e7d32" stroke-width="1"/>
-  <text x="490" y="638" fill="#555" font-size="7">→ Estructura documentada</text>
-
-  <!-- Nómina Electrónica -->
-  <rect x="380" y="665" width="130" height="30" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="445" y="684" text-anchor="middle" fill="#1565c0" font-size="9" font-weight="600">Nómina Electrónica</text>
-  <line x1="210" y1="452" x2="380" y2="680" stroke="#1565c0" stroke-width="1"/>
-  <text x="520" y="684" fill="#555" font-size="7">→ Depende si nuevo proveedor incluye proceso</text>
-
-  <!-- PureCloud -->
-  <rect x="380" y="710" width="130" height="30" rx="5" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1"/>
-  <text x="445" y="725" text-anchor="middle" fill="#555" font-size="9" font-weight="600">PureCloud (HE) 24/7</text>
-  <line x1="210" y1="455" x2="380" y2="725" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="3"/>
-  <text x="520" y="728" fill="#555" font-size="7">→ No hay integración, cargue manual 1/mes</text>
-
-  <!-- Banco Agrario -->
-  <rect x="380" y="750" width="120" height="26" rx="5" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1"/>
-  <text x="440" y="767" text-anchor="middle" fill="#555" font-size="9" font-weight="600">Banco Agrario</text>
-  <line x1="210" y1="458" x2="380" y2="763" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="3"/>
-  <text x="510" y="767" fill="#555" font-size="7">→ Generar archivo estructura banco</text>
-
-  <!-- Listas Restrictivas -->
-  <rect x="380" y="786" width="130" height="26" rx="5" fill="#fff8e1" stroke="#f57c00" stroke-width="1"/>
-  <text x="445" y="800" text-anchor="middle" fill="#e65100" font-size="9" font-weight="600">Listas Restrictivas</text>
-  <text x="445" y="809" text-anchor="middle" fill="#f57c00" font-size="7">(con Magneto)</text>
-  <line x1="210" y1="460" x2="380" y2="799" stroke="#f57c00" stroke-width="1" stroke-dasharray="3"/>
-  <text x="520" y="803" fill="#555" font-size="7">→ Revisar si consumir desde Magneto</text>
-
-  <!-- Tu Recobro -->
-  <rect x="380" y="822" width="120" height="26" rx="5" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1"/>
-  <text x="440" y="836" text-anchor="middle" fill="#555" font-size="9" font-weight="600">Tu Recobro</text>
-  <text x="440" y="845" text-anchor="middle" fill="#777" font-size="7">(Tercero)</text>
-  <line x1="210" y1="462" x2="380" y2="838" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="3"/>
-  <text x="510" y="839" fill="#555" font-size="7">→ Revisar comportamiento integración</text>
-
-  <!-- Left side label -->
-  <text x="135" y="370" text-anchor="middle" fill="#333" font-size="8">Actualizar correo laboral</text>
-
+  <defs><marker id="arAS" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#ef5350"/></marker></defs>
 </svg>
+</div>
+
+<!-- ========== 2. TO BE RANKMI ========== -->
+<h2>2. Arquitectura TO BE — Rankmi (Reemplazo)</h2>
+<p style="color:#7a8bb5;font-size:12px;margin-bottom:16px">Diagrama de integraciones del ecosistema de Nómina con Rankmi como sistema central SaaS. Elimina dependencia de Oracle/Davivienda.</p>
+
+<div style="width:100%;overflow-x:auto;margin:16px 0;background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+<table style="width:100%;border-collapse:collapse;font-size:12px">
+<thead>
+<tr style="background:#1976d2;color:#fff"><th style="padding:8px;text-align:left">Sistema Destino</th><th style="padding:8px">Tipo Integración</th><th style="padding:8px">Datos</th><th style="padding:8px">Observación</th></tr>
+</thead>
+<tbody>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#1976d2">IDM (Directorio Activo)</td><td style="padding:6px;text-align:center">WS cada 1h</td><td style="padding:6px;font-size:11px">Altas/Modificaciones/Bajas</td><td style="padding:6px;font-size:11px">Crea usuario y envía correo elect laboral</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#e65100">Filenet</td><td style="padding:6px;text-align:center">—</td><td style="padding:6px;font-size:11px">Gestor documental</td><td style="padding:6px;font-size:11px">Revisar si necesitamos copia de respaldo</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#e65100">SAGHI <span style="background:#4caf50;color:#fff;padding:1px 4px;border-radius:3px;font-size:9px">Lago</span></td><td style="padding:6px;text-align:center">Modificaciones/Bajas</td><td style="padding:6px;font-size:11px">Validar con Préstamos</td><td style="padding:6px;font-size:11px">Crear servicio o archivo plano novedades por aplicar</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#1976d2">Préstamos <span style="background:#4caf50;color:#fff;padding:1px 4px;border-radius:3px;font-size:9px">Lago</span></td><td style="padding:6px;text-align:center">Archivo + WS</td><td style="padding:6px;font-size:11px">Novedades Nómina / WS Saldos Liquidación</td><td style="padding:6px;font-size:11px">—</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#1976d2">Tesorería Tronador / Santas</td><td style="padding:6px;text-align:center">WS</td><td style="padding:6px;font-size:11px">Órdenes de Pago / Cuentas Bancarias</td><td style="padding:6px;font-size:11px">Depende código compañía para BD Tronador o Santas</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#1976d2">Adebol</td><td style="padding:6px;text-align:center">Archivo + WS</td><td style="padding:6px;font-size:11px">Info Contratos / Novedades / Saldos</td><td style="padding:6px;font-size:11px">Revisar cómo mejorar servicios y/o archivos planos</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#1976d2">Fonbolivar</td><td style="padding:6px;text-align:center">Archivo + WS</td><td style="padding:6px;font-size:11px">Info Contratos / Novedades / Saldos</td><td style="padding:6px;font-size:11px">Revisar estructura archivos planos</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#1565c0">Lago de Datos</td><td style="padding:6px;text-align:center">WS HCM + Nueva App</td><td style="padding:6px;font-size:11px">Consume data contratación / Info completa</td><td style="padding:6px;font-size:11px">Conecta a Magneto, Xplora, Terceros, CAI</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#1976d2">SunSystem <span style="background:#4caf50;color:#fff;padding:1px 4px;border-radius:3px;font-size:9px">Lago</span></td><td style="padding:6px;text-align:center">Archivo Plano</td><td style="padding:6px;font-size:11px">Info Contable</td><td style="padding:6px;font-size:11px">Estructura documentada ✓</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#1976d2">Auxiliares Contables <span style="background:#4caf50;color:#fff;padding:1px 4px;border-radius:3px;font-size:9px">Lago</span></td><td style="padding:6px;text-align:center">Archivo Plano</td><td style="padding:6px;font-size:11px">Info Contable</td><td style="padding:6px;font-size:11px">Estructura documentada ✓</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#1976d2">SITRI</td><td style="padding:6px;text-align:center">Archivo Plano</td><td style="padding:6px;font-size:11px">Info Tributaria</td><td style="padding:6px;font-size:11px">Estructura documentada ✓</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#2e7d32">DAVIVIENDA CriptoVault</td><td style="padding:6px;text-align:center">Archivo Plano Encriptado</td><td style="padding:6px;font-size:11px">Pagos Blancos</td><td style="padding:6px;font-size:11px">Estructura documentada ✓ (Centralizador)</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#2e7d32">AFC</td><td style="padding:6px;text-align:center">Archivo Plano Encriptado Manual</td><td style="padding:6px;font-size:11px">Pagos AFC</td><td style="padding:6px;font-size:11px">Estructura documentada ✓ (Centralizador)</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#1565c0">Nómina Electrónica</td><td style="padding:6px;text-align:center">WS</td><td style="padding:6px;font-size:11px">Nómina Electrónica</td><td style="padding:6px;font-size:11px;color:#ef5350">Depende si nuevo proveedor incluye proceso</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#777">PureCloud (HE 24/7)</td><td style="padding:6px;text-align:center">Archivo Plano</td><td style="padding:6px;font-size:11px">Horas Extras</td><td style="padding:6px;font-size:11px;color:#ff9800">No hay integración, cargue manual 1/mes</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#777">Banco Agrario</td><td style="padding:6px;text-align:center">Archivo Plano Embargos</td><td style="padding:6px;font-size:11px">Embargos</td><td style="padding:6px;font-size:11px">Nueva app debe generar estructura banco</td></tr>
+<tr style="background:#f8f9fa"><td style="padding:6px;font-weight:600;color:#e65100">Listas Restrictivas</td><td style="padding:6px;text-align:center">????</td><td style="padding:6px;font-size:11px">Validación</td><td style="padding:6px;font-size:11px;color:#ff9800">Revisar si API debería consumir desde Magneto</td></tr>
+<tr><td style="padding:6px;font-weight:600;color:#777">Tu Recobro (Tercero)</td><td style="padding:6px;text-align:center">Archivo Plano</td><td style="padding:6px;font-size:11px">Registro novedades Recobro</td><td style="padding:6px;font-size:11px">Revisar comportamiento integración</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ========== 3. ESTRANGULACIÓN SAGHI ========== -->
+<h2>3. Arquitectura de Estrangulación — SAGHI (C4 Nivel 3)</h2>
+<p style="color:#7a8bb5;font-size:12px;margin-bottom:16px">Esquema C4 Nivel 3 de Componentes: Oracle Database S0H (Núcleo de Negocio). Identifica dependencias críticas para la migración.</p>
+
+<div style="width:100%;overflow-x:auto;margin:16px 0;background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+
+<!-- Capa Transversal -->
+<div style="background:#e3f2fd;border:1px solid #90caf9;border-radius:6px;padding:10px 14px;margin-bottom:16px">
+  <div style="font-size:11px;font-weight:700;color:#1565c0;margin-bottom:6px">CAPA TRANSVERSAL — Infraestructura PL/SQL</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:9px;color:#333">
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">S0H_PKG_GLOBAL</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">S0H_PKG_GENERAL</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">S0H_PKG_UTILIDADES</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">S0H_PKG_CALENDARIO</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">S0H_PKG_GLOBAL_CONTRATO</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">S0H_PKG_CIFRADO_FAEL</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">Triggers CG$* (Auditoría)</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">Tipos TYP_*</span>
+    <span style="background:#fff;border:1px solid #90caf9;padding:2px 6px;border-radius:3px">Secuencias SEQ</span>
+  </div>
+</div>
+
+<!-- Componentes Grid -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+
+<!-- COMP-01 -->
+<div style="border:1px solid #4caf50;border-radius:6px;padding:10px 14px">
+  <div style="font-size:11px;font-weight:700;color:#2e7d32;margin-bottom:4px">COMP-01 | CONTRATOS</div>
+  <div style="font-size:9px;color:#555;line-height:1.6">
+    <div><strong>Packages:</strong> S0H_PKG_CONTRATO, S0H_PKG_VALID_CONTRATOS, S0H_PKG_SEGMENTA_CONTRATOS</div>
+    <div><strong>Tablas:</strong> S0H_CONTRATOS, S0H_CAMBIOS_CONTRATOS, S0H_NUMERACION_CONTRATOS</div>
+    <div><strong>Int. ext:</strong> HCM PIPOL (REST+XML via GAW, 6x/día)</div>
+    <div><strong>Consumidor:</strong> Préstamos/SIPRES · Tronador</div>
+  </div>
+</div>
+
+<!-- COMP-02 -->
+<div style="border:1px solid #4caf50;border-radius:6px;padding:10px 14px">
+  <div style="font-size:11px;font-weight:700;color:#2e7d32;margin-bottom:4px">COMP-02 | HOJA DE VIDA</div>
+  <div style="font-size:9px;color:#555;line-height:1.6">
+    <div><strong>Packages:</strong> S0H_PKG_HOJA_VIDA</div>
+    <div><strong>Tablas:</strong> S0H_PERSONAS, S0H_FORMACIONES, S0H_EXPERIENCIAS, S0H_BENEFICIARIOS</div>
+    <div><strong>Int. ext:</strong> HCM PIPOL (Personas, 6x/día)</div>
+    <div><strong>Consumidor:</strong> Simon Servicios · Intranet</div>
+  </div>
+</div>
+
+<!-- COMP-03 -->
+<div style="border:1px solid #4caf50;border-radius:6px;padding:10px 14px">
+  <div style="font-size:11px;font-weight:700;color:#2e7d32;margin-bottom:4px">COMP-03 | UNIDADES ORG.</div>
+  <div style="font-size:9px;color:#555;line-height:1.6">
+    <div><strong>Packages:</strong> S0H_PKG_UNIORG, S0H_PKG_UBICACIONES</div>
+    <div><strong>Tablas:</strong> S0H_UNIDADES_ORGANIZACIONALES, S0H_CARGOS, S0H_CENTROS_COSTO</div>
+    <div><strong>Int. ext:</strong> Sin integración externa directa</div>
+    <div><strong>Consumidor:</strong> Novell IDM (estructura org)</div>
+  </div>
+</div>
+
+<!-- COMP-09 -->
+<div style="border:1px solid #4caf50;border-radius:6px;padding:10px 14px">
+  <div style="font-size:11px;font-weight:700;color:#2e7d32;margin-bottom:4px">COMP-09 | IDONEIDADES</div>
+  <div style="font-size:9px;color:#555;line-height:1.6">
+    <div><strong>Packages:</strong> S0H_PKG_IDONEIDADES, S0H_PKG_IDONEI_XPLORA</div>
+    <div><strong>Tablas:</strong> S0H_IDONEIDADES, S0H_CAPACIDAD_PROFESIONAL</div>
+    <div><strong>Int. ext:</strong> SUCIS/SFC (archivos planos SFTP)</div>
+    <div><strong>Consumidor:</strong> —</div>
+  </div>
+</div>
+</div>
+
+<!-- COMP-04 NÓMINA (full width, critical) -->
+<div style="border:2px solid #ef5350;border-radius:6px;padding:10px 14px;margin-bottom:12px;background:rgba(239,83,80,.03)">
+  <div style="font-size:11px;font-weight:700;color:#ef5350;margin-bottom:4px">COMP-04 | NÓMINA Y LIQUIDACIÓN ⚠️ CRÍTICO</div>
+  <div style="font-size:9px;color:#555;line-height:1.6">
+    <div><strong>Packages:</strong> S0H_PKG_LIQUIDACION · S0H_PKG_NOVEDAD · S0H_PKG_ACUMULADORES · S0H_PKG_APROBACION_LIQUIDACION · S0H_PKG_NOMINA_ELECTRONICA · S0H_PKG_NOVEDAD_MASIVA · S0H_PKG_ESTADOS_NOVEDADES</div>
+    <div><strong>Tablas:</strong> S0H_NOMINAS · S0H_LIQUIDACIONES · S0H_ACUMULADOS_VINCULADO · S0H_NOV_VACACIONES · S0H_NOV_INCAP_SEG_SOC · S0H_NOV_EMBARGOS · S0H_NOV_MASIVAS</div>
+    <div><strong style="color:#ef5350">Integración:</strong> PILA (planilla aportes) · Davivienda (archivos pago) · PeopleSoft (novedades via GAW — fallas mensuales) · Préstamos/SIPRES · FonBolivar · Adebol (novedades liquidación via DB_LINK)</div>
+  </div>
+</div>
+
+<!-- Row 2 components -->
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:16px">
+
+<!-- COMP-05 -->
+<div style="border:1px solid #1976d2;border-radius:6px;padding:8px 10px">
+  <div style="font-size:10px;font-weight:700;color:#1565c0;margin-bottom:3px">COMP-05 | FACTURACIÓN</div>
+  <div style="font-size:8px;color:#555;line-height:1.5">
+    <div>S0H_PKG_FACTURACION</div>
+    <div>S0H_PKG_FACTURA_ELECT</div>
+    <div><strong>Int:</strong> DIAN (REST/JSON)</div>
+    <div><strong>→</strong> Tronador · Santas</div>
+  </div>
+</div>
+
+<!-- COMP-06 -->
+<div style="border:1px solid #1976d2;border-radius:6px;padding:8px 10px">
+  <div style="font-size:10px;font-weight:700;color:#1565c0;margin-bottom:3px">COMP-06 | SEG. SOCIAL</div>
+  <div style="font-size:8px;color:#555;line-height:1.5">
+    <div>S0H_PKG_PLANILLA_UNIFICADA</div>
+    <div>S0H_PKG_UGPP</div>
+    <div><strong>Int:</strong> PILA Operadores (arch. planos)</div>
+    <div><strong>→</strong> FonBolivar · Adebol</div>
+  </div>
+</div>
+
+<!-- COMP-07 -->
+<div style="border:1px solid #1976d2;border-radius:6px;padding:8px 10px">
+  <div style="font-size:10px;font-weight:700;color:#1565c0;margin-bottom:3px">COMP-07 | TRIBUTARIO</div>
+  <div style="font-size:8px;color:#555;line-height:1.5">
+    <div>S0H_PKG_TRIBUTARIO</div>
+    <div>S0H_RETEFUENTES_SALARIOS</div>
+    <div><strong>Int:</strong> Sin int. externa</div>
+    <div><strong>→</strong> SITRI (archivo mensual)</div>
+  </div>
+</div>
+
+<!-- COMP-08 -->
+<div style="border:1px solid #1976d2;border-radius:6px;padding:8px 10px">
+  <div style="font-size:10px;font-weight:700;color:#1565c0;margin-bottom:3px">COMP-08 | CONTABILIDAD</div>
+  <div style="font-size:8px;color:#555;line-height:1.5">
+    <div>S0H_PKG_CONTABILIZACION</div>
+    <div>S0H_AUXILIAR_CONTABLE</div>
+    <div><strong>Int:</strong> Sin int. externa</div>
+    <div><strong>→</strong> SunSystem · DataLake</div>
+  </div>
+</div>
+</div>
+
+<!-- COMP-10 + BPEL -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+<div style="border:1px solid #9e9e9e;border-radius:6px;padding:8px 10px">
+  <div style="font-size:10px;font-weight:700;color:#555;margin-bottom:3px">COMP-10 | SEGURIDAD</div>
+  <div style="font-size:8px;color:#555;line-height:1.5">
+    <div>PKG_SEGURIDAD (Esquema TSEG)</div>
+    <div>TSEG_USUARIOS · TSEG_PERFILES</div>
+    <div><strong>→</strong> Novell IDM (autenticación)</div>
+  </div>
+</div>
+<div style="border:1px solid #7e57c2;border-radius:6px;padding:8px 10px">
+  <div style="font-size:10px;font-weight:700;color:#5e35b1;margin-bottom:3px">BPEL/OSB | CERTIFICADOS Y PROCESOS</div>
+  <div style="font-size:8px;color:#555;line-height:1.5">
+    <div>BPEL_CERTIFICADOLABORAL</div>
+    <div>BPEL_CERTINGRESOSRETENCIO</div>
+    <div><strong>Int:</strong> Simasol · Intranet · Simon Servicios</div>
+    <div><strong>→</strong> Stellent (por validar)</div>
+  </div>
+</div>
+</div>
+
+<!-- Integraciones externas bottom -->
+<div style="background:#f5f5f5;border:1px solid #e0e0e0;border-radius:6px;padding:10px 14px">
+  <div style="font-size:10px;font-weight:700;color:#333;margin-bottom:6px">Integraciones Externas (DB_LINK y Servicios)</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:8px">
+    <span style="background:#ef5350;color:#fff;padding:2px 6px;border-radius:3px">SIPANU [DB_LINK]</span>
+    <span style="background:#ef5350;color:#fff;padding:2px 6px;border-radius:3px">Tesorería Santas [DB_LINK]</span>
+    <span style="background:#ef5350;color:#fff;padding:2px 6px;border-radius:3px">Comisiones [DB_LINK]</span>
+    <span style="background:#1976d2;color:#fff;padding:2px 6px;border-radius:3px">Préstamos/SIPRES [DB_LINK]</span>
+    <span style="background:#1976d2;color:#fff;padding:2px 6px;border-radius:3px">FonBolivar [Arch. planos]</span>
+    <span style="background:#1976d2;color:#fff;padding:2px 6px;border-radius:3px">Adebol [Arch. planos]</span>
+    <span style="background:#7e57c2;color:#fff;padding:2px 6px;border-radius:3px">COSTEO SPYG [DB_LINK]</span>
+    <span style="background:#ff9800;color:#fff;padding:2px 6px;border-radius:3px">Flujo Caja [DB_LINK]</span>
+    <span style="background:#ff9800;color:#fff;padding:2px 6px;border-radius:3px">Fuerza Ventas [DB_LINK]</span>
+    <span style="background:#9e9e9e;color:#fff;padding:2px 6px;border-radius:3px">Eventos Mensajería [Correos]</span>
+    <span style="background:#9e9e9e;color:#fff;padding:2px 6px;border-radius:3px">Mi Compañía [MCOMPANIAPP]</span>
+    <span style="background:#e91e63;color:#fff;padding:2px 6px;border-radius:3px">PeopleSoft [GAW - Fallas]</span>
+    <span style="background:#4caf50;color:#fff;padding:2px 6px;border-radius:3px">DIAN [REST/JSON]</span>
+    <span style="background:#4caf50;color:#fff;padding:2px 6px;border-radius:3px">PILA [Arch. planos]</span>
+    <span style="background:#795548;color:#fff;padding:2px 6px;border-radius:3px">SUCIS/SFC [SFTP]</span>
+    <span style="background:#ff5722;color:#fff;padding:2px 6px;border-radius:3px">Facturación Carvajal [SOAP/REST]</span>
+  </div>
+</div>
+
+<!-- MCOMPANIAPP warning -->
+<div style="margin-top:12px;background:#fff3e0;border:1px solid #ff9800;border-radius:6px;padding:8px 14px;font-size:10px;color:#e65100">
+  ⚠ <strong>MCOMPANIAPP</strong> — Esquema adicional Oracle con sinónimos hacia S0H_*. Portal Mi Compañía (Multiclaves) consume datos de SAGHI via este esquema. <strong>Dependencia crítica no documentada en el código SVN original.</strong>
+</div>
+
 </div>
 
 </div>
