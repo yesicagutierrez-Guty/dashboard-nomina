@@ -210,276 +210,187 @@ body{background:#080c22;color:#e0e0e0;font-family:'Segoe UI',system-ui,-apple-sy
 
 <!-- TAB 2: ARQUITECTURA -->
 <div id="tab-arquitectura" class="tab-content">
-<div class="informe">
-<h1>ARQUITECTURA — AS IS vs. TO BE</h1>
-<p class="subtitle">Transformación del ecosistema de nómina: de 7 plataformas fragmentadas a un modelo SaaS centralizado</p>
+<div style="width:100%;height:100%;position:relative;overflow:auto;padding:20px">
+<div style="max-width:1200px;margin:0 auto">
 
-<!-- AS IS DIAGRAM SVG -->
-<h2>Arquitectura AS IS (Estado Actual)</h2>
-<p style="color:#7a8bb5;font-size:13px;margin-bottom:18px">Ecosistema fragmentado con dependencia de Pipol (HCM Cloud + PeopleSoft 9.2), 26 legados y múltiples plataformas periféricas.</p>
+<h1 style="color:#fff;font-size:20px;margin-bottom:4px">DIAGRAMA INTEGRACIONES ECOSISTEMA NÓMINA — TO BE RANKMI</h1>
+<p style="color:#7a8bb5;font-size:12px;margin-bottom:24px">Representación detallada de las integraciones que se deben garantizar con el ecosistema de Nómina</p>
 
-<div style="width:100%;overflow-x:auto;margin:20px 0 30px">
-<svg viewBox="0 0 920 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:920px;height:auto;font-family:'Segoe UI',system-ui,sans-serif">
-  <!-- Background -->
-  <rect width="920" height="520" rx="12" fill="#0a0f2a" stroke="#ef5350" stroke-width="2"/>
-  <!-- Title -->
-  <rect x="310" y="12" width="300" height="28" rx="6" fill="#ef5350"/>
-  <text x="460" y="31" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">ECOSISTEMA AS IS — FRAGMENTADO</text>
+<div style="width:100%;overflow-x:auto">
+<svg viewBox="0 0 1100 980" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:900px;height:auto;font-family:'Segoe UI',system-ui,sans-serif">
+  <rect width="1100" height="980" fill="#fafbfc"/>
 
-  <!-- Usuarios Layer -->
-  <rect x="20" y="52" width="880" height="50" rx="8" fill="rgba(255,255,255,0.03)" stroke="#1a2550"/>
-  <text x="40" y="72" fill="#7a8bb5" font-size="10" font-weight="600">👤 USUARIOS</text>
-  <rect x="160" y="60" width="90" height="32" rx="6" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="205" y="78" text-anchor="middle" fill="#64b5f6" font-size="11" font-weight="600">5.000</text>
-  <text x="205" y="88" text-anchor="middle" fill="#a0b0c8" font-size="9">Funcionarios</text>
-  <rect x="270" y="60" width="90" height="32" rx="6" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="315" y="78" text-anchor="middle" fill="#ffa726" font-size="11" font-weight="600">775</text>
-  <text x="315" y="88" text-anchor="middle" fill="#a0b0c8" font-size="9">Líderes</text>
-  <rect x="380" y="60" width="90" height="32" rx="6" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="425" y="78" text-anchor="middle" fill="#7e57c2" font-size="11" font-weight="600">11 Empresas</text>
-  <text x="425" y="88" text-anchor="middle" fill="#a0b0c8" font-size="9">SB + Servicios</text>
+  <!-- RANKMI central -->
+  <rect x="60" y="380" width="150" height="75" rx="8" fill="#1976d2" stroke="#0d47a1" stroke-width="2"/>
+  <text x="135" y="412" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">RANKMI</text>
+  <text x="135" y="432" text-anchor="middle" fill="#bbdefb" font-size="9">SaaS Nómina</text>
+  <circle cx="60" cy="500" r="10" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
 
-  <!-- Arrows down -->
-  <line x1="300" y1="102" x2="300" y2="120" stroke="#3a4a80" stroke-width="1.5" marker-end="url(#arrowAS)"/>
-  <line x1="460" y1="102" x2="460" y2="120" stroke="#3a4a80" stroke-width="1.5" marker-end="url(#arrowAS)"/>
-  <line x1="620" y1="102" x2="620" y2="120" stroke="#3a4a80" stroke-width="1.5" marker-end="url(#arrowAS)"/>
+  <!-- Companies -->
+  <text x="20" y="530" fill="#333" font-size="8" font-weight="600">Compañías:</text>
+  <text x="20" y="542" fill="#555" font-size="7">- Capitalizadora Bolívar SA</text>
+  <text x="20" y="552" fill="#555" font-size="7">- Cía de Seguros Bolívar SA</text>
+  <text x="20" y="562" fill="#555" font-size="7">- Seguros Comerciales Bolívar SA</text>
+  <text x="20" y="572" fill="#555" font-size="7">- Inv y Cobranzas El Libertador SA</text>
+  <text x="20" y="582" fill="#555" font-size="7">- Servicios Bolívar SA / Facilities</text>
+  <text x="20" y="592" fill="#555" font-size="7">- Salud Bolívar IPS / EPS</text>
+  <text x="20" y="602" fill="#555" font-size="7">- Grupo Bolívar S.A</text>
+  <text x="20" y="612" fill="#555" font-size="7">- Fundación Cultiva El Arte</text>
 
-  <!-- Aplicaciones Layer -->
-  <rect x="20" y="120" width="880" height="140" rx="8" fill="rgba(255,255,255,0.03)" stroke="#1a2550"/>
-  <text x="40" y="140" fill="#7a8bb5" font-size="10" font-weight="600">⚙️ APLICACIONES (7 PLATAFORMAS)</text>
+  <!-- IDM -->
+  <rect x="380" y="30" width="110" height="36" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="435" y="50" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">IDM</text>
+  <text x="435" y="60" text-anchor="middle" fill="#777" font-size="7">(Directorio Activo)</text>
+  <line x1="210" y1="390" x2="380" y2="48" stroke="#1976d2" stroke-width="1"/>
+  <text x="250" y="35" fill="#333" font-size="7">Cada 1h - Altas/Modif/Bajas</text>
+  <text x="500" y="50" fill="#555" font-size="7">→ Crea usuario, envía correo elect laboral</text>
 
-  <!-- Row 1 -->
-  <rect x="40" y="150" width="140" height="44" rx="8" fill="rgba(239,83,80,0.1)" stroke="rgba(239,83,80,0.4)"/>
-  <text x="110" y="170" text-anchor="middle" fill="#ef5350" font-size="11" font-weight="700">Pipol HCM Cloud</text>
-  <text x="110" y="184" text-anchor="middle" fill="#a0b0c8" font-size="9">Contratación, Ausencias</text>
+  <!-- Filenet -->
+  <rect x="380" y="78" width="110" height="30" rx="5" fill="#fff" stroke="#ff9800" stroke-width="1.5"/>
+  <text x="435" y="97" text-anchor="middle" fill="#e65100" font-size="10" font-weight="600">Filenet</text>
+  <line x1="210" y1="393" x2="380" y2="93" stroke="#ff9800" stroke-width="1" stroke-dasharray="3"/>
+  <text x="500" y="97" fill="#555" font-size="7">→ Gestor documental, revisar copia respaldo</text>
 
-  <rect x="200" y="150" width="140" height="44" rx="8" fill="rgba(239,83,80,0.1)" stroke="rgba(239,83,80,0.4)"/>
-  <text x="270" y="170" text-anchor="middle" fill="#ef5350" font-size="11" font-weight="700">PeopleSoft 9.2</text>
-  <text x="270" y="184" text-anchor="middle" fill="#a0b0c8" font-size="9">Seg. Social, Nómina</text>
+  <!-- SAGHI -->
+  <rect x="380" y="120" width="110" height="30" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="435" y="139" text-anchor="middle" fill="#e65100" font-size="10" font-weight="600">SAGHI</text>
+  <rect x="495" y="126" width="25" height="13" rx="3" fill="#4caf50"/><text x="507" y="136" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
+  <line x1="210" y1="396" x2="380" y2="135" stroke="#e65100" stroke-width="1"/>
+  <text x="530" y="139" fill="#555" font-size="7">→ Validar solución con Préstamos (crear servicio/archivo)</text>
 
-  <rect x="360" y="150" width="140" height="44" rx="8" fill="rgba(239,83,80,0.1)" stroke="rgba(239,83,80,0.4)"/>
-  <text x="430" y="170" text-anchor="middle" fill="#ef5350" font-size="11" font-weight="700">Magneto</text>
-  <text x="430" y="184" text-anchor="middle" fill="#a0b0c8" font-size="9">Atracción Talento</text>
+  <!-- Préstamos -->
+  <rect x="380" y="162" width="110" height="30" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="435" y="181" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Préstamos</text>
+  <rect x="495" y="168" width="25" height="13" rx="3" fill="#4caf50"/><text x="507" y="178" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
+  <line x1="210" y1="400" x2="380" y2="177" stroke="#1976d2" stroke-width="1"/>
+  <text x="220" y="165" fill="#333" font-size="7">Novedades Nómina / WS Saldos Liquidación</text>
 
-  <rect x="520" y="150" width="140" height="44" rx="8" fill="rgba(255,167,38,0.1)" stroke="rgba(255,167,38,0.4)"/>
-  <text x="590" y="170" text-anchor="middle" fill="#ffa726" font-size="11" font-weight="700">Esago</text>
-  <text x="590" y="184" text-anchor="middle" fill="#a0b0c8" font-size="9">Beneficios, Cesantías</text>
+  <!-- Tesorería Tronador -->
+  <rect x="380" y="205" width="140" height="36" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="450" y="222" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Tesorería Tronador</text>
+  <text x="450" y="234" text-anchor="middle" fill="#777" font-size="7">Santas (50 Grupo Bolívar)</text>
+  <line x1="210" y1="405" x2="380" y2="223" stroke="#1976d2" stroke-width="1"/>
+  <text x="220" y="210" fill="#333" font-size="7">WS Órdenes de Pago / Cuentas Bancarias</text>
+  <text x="530" y="222" fill="#555" font-size="7">→ Depende código cía para BD Tronador o Santas</text>
 
-  <!-- Row 2 -->
-  <rect x="40" y="204" width="140" height="44" rx="8" fill="rgba(255,167,38,0.1)" stroke="rgba(255,167,38,0.4)"/>
-  <text x="110" y="224" text-anchor="middle" fill="#ffa726" font-size="11" font-weight="700">OneSpam</text>
-  <text x="110" y="238" text-anchor="middle" fill="#a0b0c8" font-size="9">Repositorio Contratos</text>
+  <!-- Adebol -->
+  <rect x="380" y="253" width="100" height="30" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="430" y="272" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Adebol</text>
+  <line x1="210" y1="410" x2="380" y2="268" stroke="#1976d2" stroke-width="1"/>
+  <text x="220" y="255" fill="#333" font-size="7">Archivo Plano Info Contratos / Novedades</text>
+  <text x="490" y="272" fill="#555" font-size="7">→ Revisar mejora servicios y/o archivos planos</text>
 
-  <rect x="200" y="204" width="140" height="44" rx="8" fill="rgba(255,167,38,0.1)" stroke="rgba(255,167,38,0.4)"/>
-  <text x="270" y="224" text-anchor="middle" fill="#ffa726" font-size="11" font-weight="700">Pure Cloud</text>
-  <text x="270" y="238" text-anchor="middle" fill="#a0b0c8" font-size="9">Horas Extras 24×7</text>
+  <!-- Fonbolivar -->
+  <rect x="380" y="295" width="100" height="30" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="430" y="314" text-anchor="middle" fill="#1976d2" font-size="10" font-weight="600">Fonbolivar</text>
+  <line x1="210" y1="415" x2="380" y2="310" stroke="#1976d2" stroke-width="1"/>
 
-  <rect x="360" y="204" width="140" height="44" rx="8" fill="rgba(239,83,80,0.1)" stroke="rgba(239,83,80,0.4)"/>
-  <text x="430" y="224" text-anchor="middle" fill="#ef5350" font-size="11" font-weight="700">Tronador</text>
-  <text x="430" y="238" text-anchor="middle" fill="#a0b0c8" font-size="9">Pagos</text>
+  <!-- Lago de Datos -->
+  <rect x="380" y="340" width="130" height="36" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="445" y="360" text-anchor="middle" fill="#1565c0" font-size="10" font-weight="600">Lago de Datos</text>
+  <line x1="210" y1="420" x2="380" y2="358" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="220" y="345" fill="#333" font-size="7">Nueva App / Consume data / WS HCM / Info contratación</text>
 
-  <rect x="520" y="204" width="140" height="44" rx="8" fill="rgba(66,165,245,0.1)" stroke="rgba(66,165,245,0.4)"/>
-  <text x="590" y="224" text-anchor="middle" fill="#42a5f5" font-size="11" font-weight="700">CVS</text>
-  <text x="590" y="238" text-anchor="middle" fill="#a0b0c8" font-size="9">Tesorería</text>
+  <!-- Magneto 365 -->
+  <rect x="580" y="320" width="110" height="30" rx="5" fill="#fff8e1" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="635" y="339" text-anchor="middle" fill="#e65100" font-size="10" font-weight="600">Magneto 365</text>
+  <line x1="510" y1="350" x2="580" y2="335" stroke="#f57c00" stroke-width="1"/>
+  <text x="700" y="333" fill="#555" font-size="7">→ Revisar info al Lago, validar suficiencia</text>
 
-  <!-- Falla indicator -->
-  <rect x="680" y="150" width="200" height="98" rx="8" fill="rgba(239,83,80,0.06)" stroke="rgba(239,83,80,0.3)"/>
-  <text x="780" y="172" text-anchor="middle" fill="#ef5350" font-size="20" font-weight="700">40%</text>
-  <text x="780" y="190" text-anchor="middle" fill="#a0b0c8" font-size="10">Fallas integración</text>
-  <text x="780" y="204" text-anchor="middle" fill="#a0b0c8" font-size="10">HCM ↔ PeopleSoft</text>
-  <line x1="700" y1="215" x2="860" y2="215" stroke="#2a3560" stroke-width="1"/>
-  <text x="780" y="232" text-anchor="middle" fill="#ffa726" font-size="16" font-weight="700">2 horas</text>
-  <text x="780" y="244" text-anchor="middle" fill="#a0b0c8" font-size="9">Procesamiento nómina</text>
+  <!-- Xplora -->
+  <rect x="580" y="358" width="90" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
+  <text x="625" y="375" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">Xplora</text>
+  <rect x="675" y="362" width="25" height="13" rx="3" fill="#4caf50"/><text x="687" y="372" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
+  <line x1="510" y1="358" x2="580" y2="371" stroke="#1976d2" stroke-width="1"/>
+  <text x="710" y="375" fill="#555" font-size="7">→ Revisar posibilidad API vs Archivo Plano</text>
 
-  <!-- Integración Layer -->
-  <rect x="20" y="275" width="880" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="#1a2550"/>
-  <text x="40" y="295" fill="#7a8bb5" font-size="10" font-weight="600">🔗 CAPA DE INTEGRACIÓN (23 integraciones, 5 críticas, 3 exclusivas Bolívar)</text>
+  <!-- Terceros -->
+  <rect x="580" y="392" width="90" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
+  <text x="625" y="409" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">Terceros</text>
+  <rect x="675" y="396" width="25" height="13" rx="3" fill="#4caf50"/><text x="687" y="406" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
+  <line x1="510" y1="365" x2="580" y2="405" stroke="#1976d2" stroke-width="1"/>
+  <text x="710" y="409" fill="#555" font-size="7">→ Revisar info Terceros ingestando en Lago</text>
 
-  <rect x="40" y="305" width="200" height="38" rx="8" fill="rgba(126,87,194,0.1)" stroke="rgba(126,87,194,0.3)"/>
-  <text x="140" y="325" text-anchor="middle" fill="#7e57c2" font-size="11" font-weight="600">Centro Servicio Pipol GB</text>
-  <text x="140" y="338" text-anchor="middle" fill="#a0b0c8" font-size="9">Administra 26 legados</text>
+  <!-- CAI -->
+  <rect x="580" y="426" width="90" height="26" rx="5" fill="#fff8e1" stroke="#f57c00" stroke-width="1.2"/>
+  <text x="625" y="440" text-anchor="middle" fill="#e65100" font-size="9" font-weight="600">CAI</text>
+  <text x="625" y="449" text-anchor="middle" fill="#f57c00" font-size="7">Activos?</text>
+  <line x1="510" y1="370" x2="580" y2="439" stroke="#f57c00" stroke-width="1" stroke-dasharray="3"/>
+  <text x="680" y="443" fill="#555" font-size="7">→ Revisar gestión Activos (Gerencia Adm.)</text>
 
-  <rect x="260" y="305" width="200" height="38" rx="8" fill="rgba(126,87,194,0.1)" stroke="rgba(126,87,194,0.3)"/>
-  <text x="360" y="325" text-anchor="middle" fill="#7e57c2" font-size="11" font-weight="600">GAW Davivienda</text>
-  <text x="360" y="338" text-anchor="middle" fill="#a0b0c8" font-size="9">OPCON + DB_LINK</text>
+  <!-- SunSystem -->
+  <rect x="380" y="470" width="110" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
+  <text x="435" y="487" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">SunSystem</text>
+  <rect x="495" y="474" width="25" height="13" rx="3" fill="#4caf50"/><text x="507" y="484" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
+  <line x1="210" y1="430" x2="380" y2="483" stroke="#1976d2" stroke-width="1"/>
+  <text x="530" y="487" fill="#555" font-size="7">→ Estructura documentada</text>
 
-  <rect x="480" y="305" width="180" height="38" rx="8" fill="rgba(126,87,194,0.1)" stroke="rgba(126,87,194,0.3)"/>
-  <text x="570" y="325" text-anchor="middle" fill="#7e57c2" font-size="11" font-weight="600">Préstamos / Adebol</text>
-  <text x="570" y="338" text-anchor="middle" fill="#a0b0c8" font-size="9">Fonbolivar (Exclusivas)</text>
+  <!-- Aux Contables -->
+  <rect x="380" y="505" width="130" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
+  <text x="445" y="522" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">Auxiliares Contables</text>
+  <rect x="515" y="509" width="25" height="13" rx="3" fill="#4caf50"/><text x="527" y="519" text-anchor="middle" fill="#fff" font-size="6">Lago</text>
+  <line x1="210" y1="435" x2="380" y2="518" stroke="#1976d2" stroke-width="1"/>
+  <text x="550" y="522" fill="#555" font-size="7">→ Estructura documentada</text>
 
-  <!-- Dependencias externas -->
-  <rect x="20" y="370" width="880" height="60" rx="8" fill="rgba(255,255,255,0.03)" stroke="#ef5350" stroke-dasharray="4"/>
-  <text x="40" y="390" fill="#ef5350" font-size="10" font-weight="600">⚠️ DEPENDENCIAS EXTERNAS CRÍTICAS</text>
-  <rect x="40" y="400" width="160" height="24" rx="6" fill="rgba(239,83,80,0.08)" stroke="rgba(239,83,80,0.3)"/>
-  <text x="120" y="416" text-anchor="middle" fill="#ef5350" font-size="10" font-weight="600">Oracle (vence 02/2027)</text>
-  <rect x="220" y="400" width="180" height="24" rx="6" fill="rgba(239,83,80,0.08)" stroke="rgba(239,83,80,0.3)"/>
-  <text x="310" y="416" text-anchor="middle" fill="#ef5350" font-size="10" font-weight="600">Infra Davivienda (GAW)</text>
-  <rect x="420" y="400" width="140" height="24" rx="6" fill="rgba(255,167,38,0.08)" stroke="rgba(255,167,38,0.3)"/>
-  <text x="490" y="416" text-anchor="middle" fill="#ffa726" font-size="10" font-weight="600">63 fallas/año</text>
+  <!-- SITRI -->
+  <rect x="380" y="540" width="90" height="26" rx="5" fill="#fff" stroke="#1976d2" stroke-width="1.2"/>
+  <text x="425" y="557" text-anchor="middle" fill="#1976d2" font-size="9" font-weight="600">SITRI</text>
+  <line x1="210" y1="440" x2="380" y2="553" stroke="#1976d2" stroke-width="1"/>
+  <text x="480" y="557" fill="#555" font-size="7">→ Estructura documentada</text>
 
-  <!-- Problemas footer -->
-  <rect x="20" y="445" width="880" height="60" rx="8" fill="rgba(239,83,80,0.04)" stroke="rgba(239,83,80,0.2)"/>
-  <text x="460" y="468" text-anchor="middle" fill="#ef5350" font-size="12" font-weight="700">PROBLEMAS PRINCIPALES</text>
-  <text x="180" y="490" text-anchor="middle" fill="#c0cce0" font-size="10">• Formulación compartida inexacta</text>
-  <text x="460" y="490" text-anchor="middle" fill="#c0cce0" font-size="10">• 7 plataformas sin interoperabilidad</text>
-  <text x="740" y="490" text-anchor="middle" fill="#c0cce0" font-size="10">• Dependencia total de Oracle/Davivienda</text>
+  <!-- DAVIVIENDA CriptoVault -->
+  <rect x="380" y="580" width="140" height="30" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="450" y="595" text-anchor="middle" fill="#2e7d32" font-size="9" font-weight="600">DAVIVIENDA CriptoVault</text>
+  <text x="450" y="605" text-anchor="middle" fill="#4caf50" font-size="7">(Centralizador)</text>
+  <line x1="210" y1="445" x2="380" y2="595" stroke="#2e7d32" stroke-width="1"/>
+  <text x="530" y="595" fill="#555" font-size="7">→ Estructura documentada</text>
 
-  <!-- Arrow marker -->
-  <defs><marker id="arrowAS" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#3a4a80"/></marker></defs>
+  <!-- AFC -->
+  <rect x="380" y="620" width="100" height="30" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="430" y="635" text-anchor="middle" fill="#2e7d32" font-size="9" font-weight="600">AFC</text>
+  <text x="430" y="645" text-anchor="middle" fill="#4caf50" font-size="7">(Centralizador)</text>
+  <line x1="210" y1="448" x2="380" y2="635" stroke="#2e7d32" stroke-width="1"/>
+  <text x="490" y="638" fill="#555" font-size="7">→ Estructura documentada</text>
+
+  <!-- Nómina Electrónica -->
+  <rect x="380" y="665" width="130" height="30" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="445" y="684" text-anchor="middle" fill="#1565c0" font-size="9" font-weight="600">Nómina Electrónica</text>
+  <line x1="210" y1="452" x2="380" y2="680" stroke="#1565c0" stroke-width="1"/>
+  <text x="520" y="684" fill="#555" font-size="7">→ Depende si nuevo proveedor incluye proceso</text>
+
+  <!-- PureCloud -->
+  <rect x="380" y="710" width="130" height="30" rx="5" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="445" y="725" text-anchor="middle" fill="#555" font-size="9" font-weight="600">PureCloud (HE) 24/7</text>
+  <line x1="210" y1="455" x2="380" y2="725" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="3"/>
+  <text x="520" y="728" fill="#555" font-size="7">→ No hay integración, cargue manual 1/mes</text>
+
+  <!-- Banco Agrario -->
+  <rect x="380" y="750" width="120" height="26" rx="5" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="440" y="767" text-anchor="middle" fill="#555" font-size="9" font-weight="600">Banco Agrario</text>
+  <line x1="210" y1="458" x2="380" y2="763" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="3"/>
+  <text x="510" y="767" fill="#555" font-size="7">→ Generar archivo estructura banco</text>
+
+  <!-- Listas Restrictivas -->
+  <rect x="380" y="786" width="130" height="26" rx="5" fill="#fff8e1" stroke="#f57c00" stroke-width="1"/>
+  <text x="445" y="800" text-anchor="middle" fill="#e65100" font-size="9" font-weight="600">Listas Restrictivas</text>
+  <text x="445" y="809" text-anchor="middle" fill="#f57c00" font-size="7">(con Magneto)</text>
+  <line x1="210" y1="460" x2="380" y2="799" stroke="#f57c00" stroke-width="1" stroke-dasharray="3"/>
+  <text x="520" y="803" fill="#555" font-size="7">→ Revisar si consumir desde Magneto</text>
+
+  <!-- Tu Recobro -->
+  <rect x="380" y="822" width="120" height="26" rx="5" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="440" y="836" text-anchor="middle" fill="#555" font-size="9" font-weight="600">Tu Recobro</text>
+  <text x="440" y="845" text-anchor="middle" fill="#777" font-size="7">(Tercero)</text>
+  <line x1="210" y1="462" x2="380" y2="838" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="3"/>
+  <text x="510" y="839" fill="#555" font-size="7">→ Revisar comportamiento integración</text>
+
+  <!-- Left side label -->
+  <text x="135" y="370" text-anchor="middle" fill="#333" font-size="8">Actualizar correo laboral</text>
+
 </svg>
 </div>
 
-<!-- SEPARADOR -->
-<div style="text-align:center;margin:32px 0;position:relative">
-  <div style="border-top:2px dashed #2a3a70;position:absolute;top:50%;left:0;right:0"></div>
-  <span style="background:#080c22;padding:0 20px;position:relative;color:#64b5f6;font-weight:700;font-size:14px">⬇️ MIGRACIÓN ⬇️</span>
 </div>
-
-<!-- TO BE DIAGRAM SVG -->
-<h2>Arquitectura TO BE (Estado Futuro)</h2>
-<p style="color:#7a8bb5;font-size:13px;margin-bottom:18px">Modelo SaaS centralizado con autogestión, procesamiento en 20 minutos y eliminación de dependencias fragmentadas.</p>
-
-<div style="width:100%;overflow-x:auto;margin:20px 0 30px">
-<svg viewBox="0 0 920 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:920px;height:auto;font-family:'Segoe UI',system-ui,sans-serif">
-  <!-- Background -->
-  <rect width="920" height="520" rx="12" fill="#0a0f2a" stroke="#4caf50" stroke-width="2"/>
-  <!-- Title -->
-  <rect x="280" y="12" width="360" height="28" rx="6" fill="#4caf50"/>
-  <text x="460" y="31" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">ECOSISTEMA TO BE — CENTRALIZADO (SaaS)</text>
-
-  <!-- Usuarios Layer -->
-  <rect x="20" y="52" width="880" height="55" rx="8" fill="rgba(255,255,255,0.03)" stroke="#1a2550"/>
-  <text x="40" y="72" fill="#7a8bb5" font-size="10" font-weight="600">👤 AUTOGESTIÓN MULTI-DISPOSITIVO</text>
-  <rect x="160" y="62" width="100" height="36" rx="6" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="210" y="80" text-anchor="middle" fill="#4caf50" font-size="14">💻</text>
-  <text x="210" y="93" text-anchor="middle" fill="#c0cce0" font-size="9">PC / Web</text>
-  <rect x="280" y="62" width="100" height="36" rx="6" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="330" y="80" text-anchor="middle" fill="#4caf50" font-size="14">📱</text>
-  <text x="330" y="93" text-anchor="middle" fill="#c0cce0" font-size="9">Mobile</text>
-  <rect x="400" y="62" width="100" height="36" rx="6" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="450" y="80" text-anchor="middle" fill="#4caf50" font-size="14">📋</text>
-  <text x="450" y="93" text-anchor="middle" fill="#c0cce0" font-size="9">Tablet / iPad</text>
-  <rect x="520" y="62" width="120" height="36" rx="6" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="580" y="80" text-anchor="middle" fill="#4caf50" font-size="14">👔</text>
-  <text x="580" y="93" text-anchor="middle" fill="#c0cce0" font-size="9">Líderes (Autogestión)</text>
-
-  <!-- Arrows down -->
-  <line x1="350" y1="107" x2="350" y2="125" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arrowTB)"/>
-  <line x1="500" y1="107" x2="500" y2="125" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arrowTB)"/>
-
-  <!-- Plataforma Central -->
-  <rect x="20" y="125" width="880" height="160" rx="8" fill="rgba(76,175,80,0.04)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="40" y="145" fill="#4caf50" font-size="10" font-weight="600">🏗️ PLATAFORMA CENTRAL SaaS (No Code / Low Code)</text>
-
-  <!-- Módulos Row 1 -->
-  <rect x="40" y="155" width="130" height="50" rx="8" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="105" y="177" text-anchor="middle" fill="#4caf50" font-size="11" font-weight="700">Core RRHH</text>
-  <text x="105" y="193" text-anchor="middle" fill="#a0b0c8" font-size="9">Onboarding, Contratación</text>
-
-  <rect x="185" y="155" width="130" height="50" rx="8" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="250" y="177" text-anchor="middle" fill="#4caf50" font-size="11" font-weight="700">Nómina</text>
-  <text x="250" y="193" text-anchor="middle" fill="#a0b0c8" font-size="9">Cálculo, Electrónica</text>
-
-  <rect x="330" y="155" width="130" height="50" rx="8" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="395" y="177" text-anchor="middle" fill="#4caf50" font-size="11" font-weight="700">Compensación</text>
-  <text x="395" y="193" text-anchor="middle" fill="#a0b0c8" font-size="9">Beneficios, Horas Extras</text>
-
-  <rect x="475" y="155" width="130" height="50" rx="8" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="540" y="177" text-anchor="middle" fill="#4caf50" font-size="11" font-weight="700">Ausencias</text>
-  <text x="540" y="193" text-anchor="middle" fill="#a0b0c8" font-size="9">Gestión centralizada</text>
-
-  <rect x="620" y="155" width="130" height="50" rx="8" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="685" y="177" text-anchor="middle" fill="#4caf50" font-size="11" font-weight="700">Rel. Laborales</text>
-  <text x="685" y="193" text-anchor="middle" fill="#a0b0c8" font-size="9">Contratos, Embargos</text>
-
-  <rect x="765" y="155" width="120" height="50" rx="8" fill="rgba(76,175,80,0.1)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="825" y="177" text-anchor="middle" fill="#4caf50" font-size="11" font-weight="700">Reportes</text>
-  <text x="825" y="193" text-anchor="middle" fill="#a0b0c8" font-size="9">Métricas, Tableros</text>
-
-  <!-- Funcionalidades nativas -->
-  <rect x="40" y="215" width="420" height="60" rx="8" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="60" y="233" fill="#4caf50" font-size="10" font-weight="600">✨ FUNCIONALIDADES NATIVAS</text>
-  <text x="60" y="248" fill="#c0cce0" font-size="9">✓ Autogestión líderes  ✓ Retenciones diarias  ✓ Presupuesto personal</text>
-  <text x="60" y="263" fill="#c0cce0" font-size="9">✓ Traslados EPS/Pensiones  ✓ Alivios tributarios  ✓ Cap. endeudamiento</text>
-
-  <!-- KPIs TO BE -->
-  <rect x="480" y="215" width="405" height="60" rx="8" fill="rgba(76,175,80,0.06)" stroke="rgba(76,175,80,0.3)"/>
-  <text x="500" y="233" fill="#4caf50" font-size="10" font-weight="600">📊 MEJORAS CLAVE</text>
-  <text x="560" y="252" text-anchor="middle" fill="#4caf50" font-size="18" font-weight="700">20 min</text>
-  <text x="560" y="266" text-anchor="middle" fill="#a0b0c8" font-size="9">Procesamiento</text>
-  <text x="700" y="252" text-anchor="middle" fill="#4caf50" font-size="18" font-weight="700">1</text>
-  <text x="700" y="266" text-anchor="middle" fill="#a0b0c8" font-size="9">Plataforma</text>
-  <text x="830" y="252" text-anchor="middle" fill="#4caf50" font-size="18" font-weight="700">0</text>
-  <text x="830" y="266" text-anchor="middle" fill="#a0b0c8" font-size="9">Dep. Oracle</text>
-
-  <!-- Arrows down to integrations -->
-  <line x1="460" y1="285" x2="460" y2="305" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arrowTB)"/>
-
-  <!-- Integraciones API-First -->
-  <rect x="20" y="305" width="880" height="70" rx="8" fill="rgba(255,255,255,0.03)" stroke="#1a2550"/>
-  <text x="40" y="325" fill="#42a5f5" font-size="10" font-weight="600">🔗 INTEGRACIONES SIMPLIFICADAS (API-First)</text>
-
-  <rect x="40" y="335" width="150" height="30" rx="6" fill="rgba(66,165,245,0.08)" stroke="rgba(66,165,245,0.3)"/>
-  <text x="115" y="354" text-anchor="middle" fill="#42a5f5" font-size="10" font-weight="600">Tronador/CVS</text>
-
-  <rect x="210" y="335" width="150" height="30" rx="6" fill="rgba(66,165,245,0.08)" stroke="rgba(66,165,245,0.3)"/>
-  <text x="285" y="354" text-anchor="middle" fill="#42a5f5" font-size="10" font-weight="600">DIAN (Nóm. Electrónica)</text>
-
-  <rect x="380" y="335" width="150" height="30" rx="6" fill="rgba(66,165,245,0.08)" stroke="rgba(66,165,245,0.3)"/>
-  <text x="455" y="354" text-anchor="middle" fill="#42a5f5" font-size="10" font-weight="600">PILA (Seg. Social)</text>
-
-  <rect x="550" y="335" width="200" height="30" rx="6" fill="rgba(126,87,194,0.08)" stroke="rgba(126,87,194,0.3)"/>
-  <text x="650" y="354" text-anchor="middle" fill="#7e57c2" font-size="10" font-weight="600">Préstamos / Adebol / Fonbolivar</text>
-
-  <!-- Arrows down -->
-  <line x1="460" y1="375" x2="460" y2="395" stroke="#42a5f5" stroke-width="1.5" marker-end="url(#arrowTB)"/>
-
-  <!-- Entidades externas -->
-  <rect x="20" y="395" width="880" height="55" rx="8" fill="rgba(255,255,255,0.03)" stroke="#1a2550"/>
-  <text x="40" y="415" fill="#7a8bb5" font-size="10" font-weight="600">🏛️ ENTIDADES EXTERNAS</text>
-  <rect x="160" y="405" width="120" height="36" rx="6" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="220" y="425" text-anchor="middle" fill="#c0cce0" font-size="10" font-weight="600">Bancos</text>
-  <text x="220" y="437" text-anchor="middle" fill="#a0b0c8" font-size="9">Pagos nómina</text>
-  <rect x="300" y="405" width="120" height="36" rx="6" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="360" y="425" text-anchor="middle" fill="#c0cce0" font-size="10" font-weight="600">DIAN</text>
-  <text x="360" y="437" text-anchor="middle" fill="#a0b0c8" font-size="9">Reportes SITRI</text>
-  <rect x="440" y="405" width="120" height="36" rx="6" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="500" y="425" text-anchor="middle" fill="#c0cce0" font-size="10" font-weight="600">UGPP</text>
-  <text x="500" y="437" text-anchor="middle" fill="#a0b0c8" font-size="9">PILA</text>
-  <rect x="580" y="405" width="120" height="36" rx="6" fill="#1a2550" stroke="#2a3a70"/>
-  <text x="640" y="425" text-anchor="middle" fill="#c0cce0" font-size="10" font-weight="600">Min. Trabajo</text>
-  <text x="640" y="437" text-anchor="middle" fill="#a0b0c8" font-size="9">Regulación</text>
-
-  <!-- Footer beneficios -->
-  <rect x="20" y="462" width="880" height="46" rx="8" fill="rgba(76,175,80,0.06)" stroke="rgba(76,175,80,0.2)"/>
-  <text x="460" y="482" text-anchor="middle" fill="#4caf50" font-size="12" font-weight="700">BENEFICIOS CLAVE</text>
-  <text x="180" y="498" text-anchor="middle" fill="#c0cce0" font-size="10">• Autonomía TH (No Code)</text>
-  <text x="420" y="498" text-anchor="middle" fill="#c0cce0" font-size="10">• 0 errores cálculo (automatizado)</text>
-  <text x="700" y="498" text-anchor="middle" fill="#c0cce0" font-size="10">• Sin dependencia Oracle/Davivienda</text>
-
-  <!-- Arrow marker -->
-  <defs><marker id="arrowTB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#4caf50"/></marker></defs>
-</svg>
-</div>
-
-<!-- Comparativa -->
-<h2>Comparativa AS IS vs. TO BE</h2>
-<table class="info-table">
-<thead><tr><th>Aspecto</th><th style="color:#ef5350">AS IS</th><th style="color:#4caf50">TO BE</th></tr></thead>
-<tbody>
-<tr><td>Plataformas</td><td style="color:#ef5350;font-weight:600">7 fragmentadas</td><td style="color:#4caf50;font-weight:600">1 centralizada (SaaS)</td></tr>
-<tr><td>Procesamiento nómina</td><td style="color:#ef5350;font-weight:600">2 horas</td><td style="color:#4caf50;font-weight:600">20 minutos</td></tr>
-<tr><td>Integraciones</td><td style="color:#ef5350;font-weight:600">23 (5 críticas)</td><td style="color:#4caf50;font-weight:600">API-First simplificadas</td></tr>
-<tr><td>Dependencia Oracle</td><td style="color:#ef5350;font-weight:600">Total (contrato vence 02/2027)</td><td style="color:#4caf50;font-weight:600">Eliminada</td></tr>
-<tr><td>Dependencia Davivienda</td><td style="color:#ef5350;font-weight:600">GAW + OPCON + DB_LINK</td><td style="color:#4caf50;font-weight:600">Eliminada</td></tr>
-<tr><td>Autogestión</td><td style="color:#ef5350;font-weight:600">No disponible</td><td style="color:#4caf50;font-weight:600">Líderes y colaboradores</td></tr>
-<tr><td>Dispositivos</td><td style="color:#ef5350;font-weight:600">Solo PC</td><td style="color:#4caf50;font-weight:600">PC, Tablet, iPad, Mobile</td></tr>
-<tr><td>Modelo técnico</td><td style="color:#ef5350;font-weight:600">On-premise / Legacy</td><td style="color:#4caf50;font-weight:600">No Code / Low Code (SaaS)</td></tr>
-<tr><td>Fallas cálculo</td><td style="color:#ef5350;font-weight:600">63 casos/año (manual)</td><td style="color:#4caf50;font-weight:600">Automatizado sin errores</td></tr>
-<tr><td>Autonomía TH</td><td style="color:#ef5350;font-weight:600">Depende de TI para cambios</td><td style="color:#4caf50;font-weight:600">TH gestiona conceptos y fórmulas</td></tr>
-</tbody>
-</table>
-
 </div>
 </div>
 
@@ -487,231 +398,113 @@ body{background:#080c22;color:#e0e0e0;font-family:'Segoe UI',system-ui,-apple-sy
 <div id="tab-cronograma" class="tab-content">
 <div class="informe" style="max-width:1200px">
 <h1>PLAN DE TRABAJO — IMPLEMENTACIÓN RANKMI</h1>
-<p class="subtitle">Ejecución: 01/06/2026 — 30/09/2026 (4 meses, 122 días) | Fecha límite Oracle: 06/02/2027</p>
+<p class="subtitle">Ejecución: 01/06/2026 — 30/09/2026 | Integraciones Ecosistema Nómina hacia Rankmi</p>
 
-<!-- GANTT CHART -->
-<div style="width:100%;overflow-x:auto;margin:20px 0;background:#f8f9fb;border-radius:12px;padding:24px 20px">
+<!-- GANTT VISUAL -->
+<div style="background:#f5f7fa;border-radius:12px;padding:20px;margin:20px 0;overflow-x:auto">
 
-<!-- Header semanas -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;margin-bottom:4px">
-  <div></div>
-  <div style="grid-column:span 4;text-align:center;background:#e8edf3;border-radius:4px;padding:6px 0;font-size:11px;font-weight:700;color:#2c3e50;border-right:1px solid #ddd">Jun 1-28</div>
-  <div style="grid-column:span 5;text-align:center;background:#e8edf3;border-radius:4px;padding:6px 0;font-size:11px;font-weight:700;color:#2c3e50;border-right:1px solid #ddd">Jul 1-31</div>
-  <div style="grid-column:span 4;text-align:center;background:#e8edf3;border-radius:4px;padding:6px 0;font-size:11px;font-weight:700;color:#2c3e50;border-right:1px solid #ddd">Ago 1-31</div>
-  <div style="grid-column:span 4;text-align:center;background:#e8edf3;border-radius:4px;padding:6px 0;font-size:11px;font-weight:700;color:#2c3e50">Sep 1-30</div>
+<!-- HEADER MESES -->
+<table style="width:100%;border-collapse:collapse;min-width:900px">
+<thead>
+<tr>
+  <th style="width:220px;background:#e2e8f0;padding:10px;text-align:left;font-size:12px;color:#2d3748;border-radius:6px 0 0 0">Plan de Trabajo</th>
+  <th style="width:30px;background:#e2e8f0;padding:6px;text-align:center;font-size:10px;color:#4a5568">Inicio</th>
+  <th style="width:30px;background:#e2e8f0;padding:6px;text-align:center;font-size:10px;color:#4a5568">Fin</th>
+  <th colspan="4" style="background:#dbeafe;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#1e40af;border-left:2px solid #fff">JUN 2026</th>
+  <th colspan="5" style="background:#c7d2fe;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#3730a3;border-left:2px solid #fff">JUL 2026</th>
+  <th colspan="4" style="background:#a5b4fc;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#312e81;border-left:2px solid #fff">AGO 2026</th>
+  <th colspan="4" style="background:#818cf8;padding:8px;text-align:center;font-size:12px;font-weight:700;color:#fff;border-left:2px solid #fff;border-radius:0 6px 0 0">SEP 2026</th>
+</tr>
+<tr>
+  <th style="background:#f1f5f9;padding:4px"></th>
+  <th style="background:#f1f5f9;padding:4px"></th>
+  <th style="background:#f1f5f9;padding:4px"></th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S1</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S2</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S3</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S4</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S5</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S6</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S7</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S8</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S9</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S10</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S11</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S12</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S13</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S14</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S15</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S16</th>
+  <th style="background:#f1f5f9;padding:4px;font-size:9px;color:#64748b;text-align:center">S17</th>
+</tr>
+</thead>
+<tbody>
+<!-- FASE 1: ARQUITECTURA -->
+<tr><td colspan="20" style="padding:10px 8px 4px;font-size:13px;font-weight:700;color:#1e40af;background:#eff6ff;border-top:2px solid #3b82f6">Definición Arquitectura Empresarial y Soluciones <span style="font-weight:400;color:#64748b;font-size:11px">(01/06 — 24/07)</span></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. IDM (Empresarial + Soluciones)</td><td style="font-size:10px;color:#6b7280;text-align:center">01/06</td><td style="font-size:10px;color:#6b7280;text-align:center">26/06</td><td colspan="4" style="padding:4px"><div style="background:linear-gradient(90deg,#60a5fa,#3b82f6);height:14px;border-radius:4px;width:100%"></div></td><td colspan="13"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Lago de Datos (SAGHI, Xplora, Terceros)</td><td style="font-size:10px;color:#6b7280;text-align:center">03/06</td><td style="font-size:10px;color:#6b7280;text-align:center">26/06</td><td colspan="4" style="padding:4px"><div style="background:linear-gradient(90deg,#38bdf8,#0ea5e9);height:14px;border-radius:4px;width:95%"></div></td><td colspan="13"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Magneto</td><td style="font-size:10px;color:#6b7280;text-align:center">09/06</td><td style="font-size:10px;color:#6b7280;text-align:center">26/06</td><td></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#22d3ee,#06b6d4);height:14px;border-radius:4px;width:100%"></div></td><td colspan="13"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Adebol / Fonbolivar / Préstamos</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">10/07</td><td colspan="4"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#818cf8,#6366f1);height:14px;border-radius:4px;width:100%"></div></td><td colspan="11"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. Tronador / Tronador Santas</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">10/07</td><td colspan="4"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#a78bfa,#7c3aed);height:14px;border-radius:4px;width:100%"></div></td><td colspan="11"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Arq. SITRI / Aux. Contables / SunSystem</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">24/07</td><td colspan="6"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#c084fc,#a855f7);height:14px;border-radius:4px;width:100%"></div></td><td colspan="9"></td></tr>
+
+<!-- FASE 2: DESARROLLO -->
+<tr><td colspan="20" style="padding:10px 8px 4px;font-size:13px;font-weight:700;color:#7c3aed;background:#f5f3ff;border-top:2px solid #7c3aed">Desarrollo Integraciones <span style="font-weight:400;color:#64748b;font-size:11px">(30/06 — 12/09)</span></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Lago de Datos - SAGHI</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#60a5fa,#2563eb);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">IDM</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#38bdf8,#0284c7);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Magneto</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#22d3ee,#0891b2);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Lago (Xplora, Terceros, Adebol/Fonb/Prést)</td><td style="font-size:10px;color:#6b7280;text-align:center">30/06</td><td style="font-size:10px;color:#6b7280;text-align:center">16/07</td><td colspan="4"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#67e8f9,#06b6d4);height:14px;border-radius:4px;width:100%"></div></td><td colspan="10"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Adebol</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#818cf8,#4f46e5);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Fonbolivar</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#a78bfa,#6d28d9);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Préstamos</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#c4b5fd,#7c3aed);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Tronador Tesorería</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#1e3a5f,#1e40af);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Tronador Santas</td><td style="font-size:10px;color:#6b7280;text-align:center">13/07</td><td style="font-size:10px;color:#6b7280;text-align:center">12/08</td><td colspan="6"></td><td colspan="5" style="padding:4px"><div style="background:linear-gradient(90deg,#1e3a8a,#312e81);height:14px;border-radius:4px;width:100%"></div></td><td colspan="6"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">SunSystem (archivo plano)</td><td style="font-size:10px;color:#6b7280;text-align:center">27/08</td><td style="font-size:10px;color:#6b7280;text-align:center">12/09</td><td colspan="11"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#475569,#1e293b);height:14px;border-radius:4px;width:100%"></div></td><td colspan="3"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">SITRI (archivo plano)</td><td style="font-size:10px;color:#6b7280;text-align:center">27/08</td><td style="font-size:10px;color:#6b7280;text-align:center">12/09</td><td colspan="11"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#64748b,#334155);height:14px;border-radius:4px;width:100%"></div></td><td colspan="3"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Aux. Contables (archivo plano)</td><td style="font-size:10px;color:#6b7280;text-align:center">27/08</td><td style="font-size:10px;color:#6b7280;text-align:center">12/09</td><td colspan="11"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#94a3b8,#475569);height:14px;border-radius:4px;width:100%"></div></td><td colspan="3"></td></tr>
+
+<!-- FASE 3: PRUEBAS -->
+<tr><td colspan="20" style="padding:10px 8px 4px;font-size:13px;font-weight:700;color:#c2410c;background:#fff7ed;border-top:2px solid #ea580c">Pruebas Integraciones <span style="font-weight:400;color:#64748b;font-size:11px">(17/07 — 30/09)</span></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Lago SAGHI / IDM / Magneto / Lago Datos</td><td style="font-size:10px;color:#6b7280;text-align:center">17/07</td><td style="font-size:10px;color:#6b7280;text-align:center">31/07</td><td colspan="7"></td><td colspan="2" style="padding:4px"><div style="background:linear-gradient(90deg,#fb923c,#ea580c);height:14px;border-radius:4px;width:100%"></div></td><td colspan="8"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Adebol / Fonbolivar / Préstamos</td><td style="font-size:10px;color:#6b7280;text-align:center">13/08</td><td style="font-size:10px;color:#6b7280;text-align:center">31/08</td><td colspan="10"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#f97316,#c2410c);height:14px;border-radius:4px;width:100%"></div></td><td colspan="4"></td></tr>
+
+<tr style="background:#fff"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">Tronador Tesorería / Santas</td><td style="font-size:10px;color:#6b7280;text-align:center">13/08</td><td style="font-size:10px;color:#6b7280;text-align:center">31/08</td><td colspan="10"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#ef4444,#b91c1c);height:14px;border-radius:4px;width:100%"></div></td><td colspan="4"></td></tr>
+
+<tr style="background:#f8fafc"><td style="padding:6px 8px 6px 20px;font-size:11px;color:#374151">SunSystem / SITRI / Aux. Contables</td><td style="font-size:10px;color:#6b7280;text-align:center">13/09</td><td style="font-size:10px;color:#6b7280;text-align:center">30/09</td><td colspan="14"></td><td colspan="3" style="padding:4px"><div style="background:linear-gradient(90deg,#7c3aed,#4c1d95);height:14px;border-radius:4px;width:100%"></div></td></tr>
+
+</tbody>
+</table>
+
+<!-- RESPONSABLES -->
+<div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;font-size:11px">
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#3b82f6;border-radius:50%"></div>Arquitectura / PO / TH</div>
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#7c3aed;border-radius:50%"></div>Equipo TI Portales</div>
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#0ea5e9;border-radius:50%"></div>Equipo TI SAGHI</div>
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#06b6d4;border-radius:50%"></div>Proveedor IDM / Magneto / Linix</div>
+  <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;background:#ea580c;border-radius:50%"></div>QC (Pruebas)</div>
 </div>
 
-<!-- Semanas sub-header -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;margin-bottom:12px">
-  <div></div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S1</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S2</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S3</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S4</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S5</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S6</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S7</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S8</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S9</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S10</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S11</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S12</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S13</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S14</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S15</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S16</div>
-  <div style="text-align:center;font-size:9px;color:#7a8bb5;padding:2px 0">S17</div>
-</div>
-
-<!-- TASK 1: ARQUITECTURA -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;margin-bottom:4px">
-  <div style="background:#1565c0;color:#fff;padding:6px 12px;border-radius:6px;font-size:12px;font-weight:700">Arquitectura</div>
-</div>
-
-<!-- Arq IDM -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Arq. IDM</div>
-  <div style="grid-column:2/6;background:linear-gradient(90deg,#4fc3f7,#29b6f6);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Arq Lago Datos -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Arq. Lago de Datos</div>
-  <div style="grid-column:2/6;background:linear-gradient(90deg,#4dd0e1,#26c6da);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Arq Magneto -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Arq. Magneto</div>
-  <div style="grid-column:3/4;background:linear-gradient(90deg,#039be5,#0288d1);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Arq Adebol/Fonbolivar/Préstamos -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Arq. Adebol/Fonbolivar/Préstamos</div>
-  <div style="grid-column:5/7;background:linear-gradient(90deg,#1976d2,#1565c0);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Arq Tronador -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Arq. Tronador / Santas</div>
-  <div style="grid-column:5/7;background:linear-gradient(90deg,#0d47a1,#1a237e);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Arq SITRI/Contables -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Arq. SITRI/Contables/SunSystem</div>
-  <div style="grid-column:7/9;background:linear-gradient(90deg,#283593,#1a237e);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- TASK 2: DESARROLLO -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;margin:12px 0 4px">
-  <div style="background:#5e35b1;color:#fff;padding:6px 12px;border-radius:6px;font-size:12px;font-weight:700">Desarrollo Integraciones</div>
-</div>
-
-<!-- Dev Lago SAGHI -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Lago de Datos - SAGHI</div>
-  <div style="grid-column:5/10;background:linear-gradient(90deg,#4fc3f7,#0288d1);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">WR</div>
-</div>
-
-<!-- Dev IDM -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">IDM</div>
-  <div style="grid-column:5/10;background:linear-gradient(90deg,#26c6da,#00897b);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">IDM</div>
-</div>
-
-<!-- Dev Magneto -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Magneto</div>
-  <div style="grid-column:6/10;background:linear-gradient(90deg,#1976d2,#1565c0);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">MAG</div>
-</div>
-
-<!-- Dev Adebol -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Adebol</div>
-  <div style="grid-column:7/13;background:linear-gradient(90deg,#5e35b1,#4527a0);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Dev Fonbolivar -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Fonbolivar</div>
-  <div style="grid-column:7/13;background:linear-gradient(90deg,#7e57c2,#5e35b1);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Dev Préstamos -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Préstamos</div>
-  <div style="grid-column:7/13;background:linear-gradient(90deg,#9575cd,#7e57c2);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Dev Tronador Tesorería -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Tronador Tesorería</div>
-  <div style="grid-column:7/13;background:linear-gradient(90deg,#0d47a1,#1a237e);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Dev Tronador Santas -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Tronador Santas</div>
-  <div style="grid-column:7/13;background:linear-gradient(90deg,#283593,#1a237e);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Dev SunSystem -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">SunSystem (archivo plano)</div>
-  <div style="grid-column:11/18;background:linear-gradient(90deg,#37474f,#263238);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Dev SITRI -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">SITRI (archivo plano)</div>
-  <div style="grid-column:11/18;background:linear-gradient(90deg,#455a64,#37474f);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Dev Aux Contables -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Aux. Contables (archivo plano)</div>
-  <div style="grid-column:11/18;background:linear-gradient(90deg,#546e7a,#455a64);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- TASK 3: PRUEBAS -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;margin:12px 0 4px">
-  <div style="background:#e65100;color:#fff;padding:6px 12px;border-radius:6px;font-size:12px;font-weight:700">Pruebas Integraciones</div>
-</div>
-
-<!-- Pruebas Lago/IDM/Magneto -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Lago SAGHI / IDM / Magneto</div>
-  <div style="grid-column:10/13;background:linear-gradient(90deg,#ff8f00,#f57c00);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">WR</div>
-</div>
-
-<!-- Pruebas Adebol/Fonb/Prést -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Adebol / Fonbolivar / Préstamos</div>
-  <div style="grid-column:13/16;background:linear-gradient(90deg,#ef6c00,#e65100);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Pruebas Tronador -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Tronador Tesorería / Santas</div>
-  <div style="grid-column:13/16;background:linear-gradient(90deg,#bf360c,#b71c1c);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Pruebas SunSystem/SITRI/Contables -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">SunSystem / SITRI / Aux. Contables</div>
-  <div style="grid-column:15/18;background:linear-gradient(90deg,#4a148c,#311b92);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- TASK 4: MIGRACIÓN -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;margin:12px 0 4px">
-  <div style="background:#00695c;color:#fff;padding:6px 12px;border-radius:6px;font-size:12px;font-weight:700">Migración de Data</div>
-</div>
-
-<!-- Migración Datos Rankmi -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Migración Datos a Rankmi</div>
-  <div style="grid-column:5/10;background:linear-gradient(90deg,#00897b,#00695c);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Migración Lago -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Migración Datos al Lago</div>
-  <div style="grid-column:5/10;background:linear-gradient(90deg,#26a69a,#00897b);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-<!-- Creación APIs -->
-<div style="display:grid;grid-template-columns:220px repeat(17,1fr);gap:0;align-items:center;height:28px;background:rgba(0,0,0,.02);border-radius:4px;margin-bottom:2px">
-  <div style="padding-left:12px;font-size:11px;color:#444;font-style:italic">Creación de APIs</div>
-  <div style="grid-column:6/10;background:linear-gradient(90deg,#4db6ac,#26a69a);height:16px;border-radius:4px;margin:0 2px"></div>
-  <div style="font-size:10px;color:#e67e22;font-weight:700;padding-left:4px">TI</div>
-</div>
-
-</div><!-- end gantt container -->
+</div><!-- end gantt -->
 
 </div>
 </div>
