@@ -612,93 +612,299 @@ body{background:#080c22;color:#e0e0e0;font-family:'Segoe UI',system-ui,-apple-sy
 <!-- TAB 3: CRONOGRAMA RANKMI -->
 <div id="tab-cronograma" class="tab-content">
 <div style="width:100%;height:100%;overflow:auto;background:#f8f9fc;padding:24px">
-<div style="max-width:1300px;margin:0 auto;font-family:'Segoe UI',system-ui,sans-serif">
+<div style="max-width:1400px;margin:0 auto;font-family:'Segoe UI',system-ui,sans-serif">
 
-<style>.gr{display:grid;grid-template-columns:210px 30px 30px repeat(32,1fr);min-width:1200px}.gc{border-bottom:1px solid #f0f0f0;min-height:22px;position:relative}.gb{height:14px;border-radius:4px;position:absolute;top:4px}</style>
-
-<!-- HEADER 8 MESES -->
-<div class="gr" style="border:1px solid #e0e0e0;border-radius:8px 8px 0 0;overflow:hidden">
-  <div style="padding:8px;font-size:11px;font-weight:700;color:#333;background:#fff">Plan de Trabajo</div>
-  <div style="padding:4px;font-size:8px;color:#666;background:#fff;text-align:center">Inicio</div>
-  <div style="padding:4px;font-size:8px;color:#666;background:#fff;text-align:center">Fin</div>
-  <div style="grid-column:span 4;background:#4f46e5;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">JUN</div>
-  <div style="grid-column:span 4;background:#6366f1;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">JUL</div>
-  <div style="grid-column:span 4;background:#818cf8;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">AGO</div>
-  <div style="grid-column:span 4;background:#a5b4fc;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">SEP</div>
-  <div style="grid-column:span 4;background:#c4b5fd;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">OCT</div>
-  <div style="grid-column:span 4;background:#ddd6fe;padding:6px;text-align:center;color:#555;font-size:10px;font-weight:700">NOV</div>
-  <div style="grid-column:span 4;background:#ede9fe;padding:6px;text-align:center;color:#555;font-size:10px;font-weight:700">DIC</div>
-  <div style="grid-column:span 4;background:#f0fdf4;padding:6px;text-align:center;color:#059669;font-size:10px;font-weight:700">ENE 27</div>
+<!-- KPIs -->
+<div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+<div style="background:#fff;border:2px solid #059669;border-radius:8px;padding:10px 16px;text-align:center;min-width:150px"><div style="font-size:10px;color:#666;text-transform:uppercase">Implementacion</div><div style="font-size:12px;margin-top:4px"><span style="color:#1976d2;font-weight:700">Esp: 39%</span> | <span style="color:#ffa726;font-weight:700">Av: 13%</span></div></div>
+<div style="background:#fff;border:2px solid #059669;border-radius:8px;padding:10px 16px;text-align:center;min-width:150px"><div style="font-size:10px;color:#666;text-transform:uppercase">Entregables TH</div><div style="font-size:12px;margin-top:4px"><span style="color:#1976d2;font-weight:700">Esp: 19%</span> | <span style="color:#4caf50;font-weight:700">Av: 15%</span></div></div>
+<div style="background:#fff;border:2px solid #6366f1;border-radius:8px;padding:10px 16px;text-align:center;min-width:150px"><div style="font-size:10px;color:#666;text-transform:uppercase">Arquitectura</div><div style="font-size:12px;margin-top:4px"><span style="color:#1976d2;font-weight:700">Esp: 87%</span> | <span style="color:#ef5350;font-weight:700">Av: 19%</span></div></div>
+<div style="background:#fff;border:2px solid #7c3aed;border-radius:8px;padding:10px 16px;text-align:center;min-width:150px"><div style="font-size:10px;color:#666;text-transform:uppercase">Desarrollo Int.</div><div style="font-size:12px;margin-top:4px"><span style="color:#1976d2;font-weight:700">Esp: 19%</span> | <span style="color:#ef5350;font-weight:700">Av: 5%</span></div></div>
 </div>
 
-<!-- SECTION: ENTREGABLES FUNCIONALES -->
-<div style="border:2px solid #059669;border-radius:8px;margin:12px 0;overflow:hidden">
-<div style="padding:6px 12px;font-size:12px;font-weight:700;color:#047857;font-style:italic">Entregables Funcionales (TH) <span style="font-weight:400;font-size:10px;color:#059669">(01/06/2026 — 31/01/2027)</span></div>
-<div style="overflow-x:auto"><div class="gr" style="row-gap:0;padding:4px 0;background:rgba(5,150,105,.02)">
-  <div style="padding:3px 8px;font-size:9px;color:#333">Config Hub (subdominios, logos, roles)</div><div style="font-size:7px;color:#888;text-align:center">01/06</div><div style="font-size:7px;color:#888;text-align:center">31/07</div><div class="gc" style="grid-column:4/12"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#4fc3f7,#0288d1)"></div></div><div class="gc" style="grid-column:12/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Config Vacaciones</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">01/07</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">14/08</div><div class="gc" style="grid-column:8/15;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#29b6f6,#0277bd)"></div></div><div class="gc" style="grid-column:15/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Firma Digital</div><div style="font-size:7px;color:#888;text-align:center">01/06</div><div style="font-size:7px;color:#888;text-align:center">31/08</div><div class="gc" style="grid-column:4/16"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#0288d1,#01579b)"></div></div><div class="gc" style="grid-column:16/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Parametrización empresas/contratos</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">01/06</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">19/06</div><div class="gc" style="grid-column:4/7;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#4caf50,#2e7d32)"></div></div><div class="gc" style="grid-column:7/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Cargue info histórica contratos</div><div style="font-size:7px;color:#888;text-align:center">16/06</div><div style="font-size:7px;color:#888;text-align:center">20/07</div><div class="gc" style="grid-column:5/10"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#26a69a,#00695c)"></div></div><div class="gc" style="grid-column:10/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Cargue nómina histórica</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">29/06</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">31/08</div><div class="gc" style="grid-column:7/16;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#7e57c2,#4527a0)"></div></div><div class="gc" style="grid-column:16/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Diseño percepciones/descuentos</div><div style="font-size:7px;color:#888;text-align:center">01/06</div><div style="font-size:7px;color:#888;text-align:center">03/07</div><div class="gc" style="grid-column:4/9"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#1976d2,#0d47a1)"></div></div><div class="gc" style="grid-column:9/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Formulación conceptos/pruebas unitarias</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">01/07</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">17/08</div><div class="gc" style="grid-column:8/14;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#1565c0,#0d47a1)"></div></div><div class="gc" style="grid-column:14/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Reportería</div><div style="font-size:7px;color:#888;text-align:center">01/06</div><div style="font-size:7px;color:#888;text-align:center">31/08</div><div class="gc" style="grid-column:4/16"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#0d47a1,#1a237e)"></div></div><div class="gc" style="grid-column:16/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Parametrización Contable</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">01/07</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">28/09</div><div class="gc" style="grid-column:8/20;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#5c6bc0,#283593)"></div></div><div class="gc" style="grid-column:20/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#ef5350;font-weight:600">1er Paralelo Nómina</div><div style="font-size:7px;color:#888;text-align:center">01/09</div><div style="font-size:7px;color:#888;text-align:center">30/09</div><div class="gc" style="grid-column:16/20"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#ef5350,#c62828)"></div></div><div class="gc" style="grid-column:20/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#d32f2f;font-weight:600;background:#f9fafb">2do Paralelo Nómina</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">01/10</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">31/10</div><div class="gc" style="grid-column:20/24;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#d32f2f,#b71c1c)"></div></div><div class="gc" style="grid-column:24/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#b71c1c;font-weight:600">3er Paralelo Nómina</div><div style="font-size:7px;color:#888;text-align:center">01/11</div><div style="font-size:7px;color:#888;text-align:center">30/11</div><div class="gc" style="grid-column:24/28"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#b71c1c,#880e4f)"></div></div><div class="gc" style="grid-column:28/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#ffa726;font-weight:600;background:#f9fafb">Carga Final Datos y Corte</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">01/12</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">31/12</div><div class="gc" style="grid-column:28/32;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#ffa726,#e65100)"></div></div><div class="gc" style="grid-column:32/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#4caf50;font-weight:700">🚀 Go-Live</div><div style="font-size:7px;color:#888;text-align:center">15/12</div><div style="font-size:7px;color:#888;text-align:center">31/01</div><div class="gc" style="grid-column:30/36"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#4caf50,#1b5e20)"></div></div>
+<!-- HEADER -->
+<div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px repeat(8,1fr);align-items:center;border:1px solid #ddd;border-radius:8px 8px 0 0;overflow:hidden;background:#fff">
+  <div style="padding:6px 8px;font-size:12px;font-weight:700;color:#333;font-style:italic">Plan de Trabajo</div>
+  <div style="font-size:9px;color:#666;text-align:center">Inicio</div>
+  <div style="font-size:9px;color:#666;text-align:center">Fin</div>
+  <div style="font-size:9px;color:#1976d2;text-align:center;font-weight:700">%Esp</div>
+  <div style="font-size:9px;color:#ffa726;text-align:center;font-weight:700">%Av</div>
+  <div style="background:#4f46e5;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">JUN</div>
+  <div style="background:#6366f1;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">JUL</div>
+  <div style="background:#818cf8;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">AGO</div>
+  <div style="background:#a5b4fc;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">SEP</div>
+  <div style="background:#c4b5fd;padding:6px;text-align:center;color:#fff;font-size:10px;font-weight:700">OCT</div>
+  <div style="background:#ddd6fe;padding:6px;text-align:center;color:#555;font-size:10px;font-weight:700">NOV</div>
+  <div style="background:#ede9fe;padding:6px;text-align:center;color:#555;font-size:10px;font-weight:700">DIC</div>
+  <div style="background:#f0fdf4;padding:6px;text-align:center;color:#059669;font-size:10px;font-weight:700">ENE 27</div>
+</div>
+<div style="border:2px solid #059669;border-radius:8px;margin:10px 0;overflow:hidden">
+<div style="padding:6px 12px;font-size:12px;font-weight:700;color:#047857;font-style:italic">Entregables Funcionales (TH) <span style="font-weight:400;font-size:10px;color:#059669">(01/06/2026 - 31/01/2027) | Esp: 19% | Av: 15%</span></div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Config Hub (subdominios, logos, roles)</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">77%</div>
+  <div style="font-size:10px;color:#ffa726;text-align:center;font-weight:700;">25%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:0%;width:24.3%;height:100%;border-radius:9px;background:linear-gradient(90deg,#1976d2,#42a5f5);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Config Vacaciones</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">14/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">38%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:12.2%;width:18%;height:100%;border-radius:9px;background:linear-gradient(90deg,#0288d1,#4fc3f7);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Firma Digital</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">51%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:0%;width:37.6%;height:100%;border-radius:9px;background:linear-gradient(90deg,#1565c0,#1976d2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Param. empresas/contratos</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">19/06</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">100%</div>
+  <div style="font-size:10px;color:#4caf50;text-align:center;font-weight:700;">95%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:0%;width:7.8%;height:100%;border-radius:9px;background:linear-gradient(90deg,#2e7d32,#4caf50);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Cargue info hist. contratos</div>
+  <div style="font-size:10px;color:#555;text-align:center;">16/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">20/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">91%</div>
+  <div style="font-size:10px;color:#4caf50;text-align:center;font-weight:700;">90%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:6.1%;width:13.9%;height:100%;border-radius:9px;background:linear-gradient(90deg,#00695c,#26a69a);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Cargue nomina historica</div>
+  <div style="font-size:10px;color:#555;text-align:center;">29/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">30%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.4%;width:26.2%;height:100%;border-radius:9px;background:linear-gradient(90deg,#4527a0,#7e57c2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Diseno percepciones/descuentos</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">03/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">100%</div>
+  <div style="font-size:10px;color:#4caf50;text-align:center;font-weight:700;">100%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:0%;width:13.1%;height:100%;border-radius:9px;background:linear-gradient(90deg,#0d47a1,#1976d2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Formulacion conceptos/pruebas</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">17/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">35%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:12.2%;width:19.6%;height:100%;border-radius:9px;background:linear-gradient(90deg,#283593,#5c6bc0);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Config Workflow Oferta/RL/Onboard</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">55%</div>
+  <div style="font-size:10px;color:#ffa726;text-align:center;font-weight:700;">20%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:12.2%;width:12.3%;height:100%;border-radius:9px;background:linear-gradient(90deg,#00838f,#26c6da);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Config Workflow Off boarding</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/08</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:24.9%;width:12.7%;height:100%;border-radius:9px;background:linear-gradient(90deg,#006064,#00acc1);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Config y pruebas Beneficios</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/08</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:24.9%;width:12.7%;height:100%;border-radius:9px;background:linear-gradient(90deg,#004d40,#009688);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Reporteria</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">51%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:0%;width:37.6%;height:100%;border-radius:9px;background:linear-gradient(90deg,#1a237e,#3949ab);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Param. Contable</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">28/09</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">19%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:12.2%;width:36.8%;height:100%;border-radius:9px;background:linear-gradient(90deg,#4a148c,#7b1fa2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#ef5350;font-weight:600; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">1er Paralelo Nomina</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/09</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/09</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:37.6%;width:12.2%;height:100%;border-radius:9px;background:linear-gradient(90deg,#c62828,#ef5350);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#ef5350;font-weight:600; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">2do Paralelo Nomina</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/10</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/10</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:49.8%;width:12.6%;height:100%;border-radius:9px;background:linear-gradient(90deg,#880e4f,#ad1457);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#ef5350;font-weight:600; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">3er Paralelo Nomina</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/11</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/11</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:62.4%;width:12.3%;height:100%;border-radius:9px;background:linear-gradient(90deg,#4a148c,#6a1b9a);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#e65100;font-weight:600; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Carga Final Datos y Corte</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/12</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/12</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:74.7%;width:12.6%;height:100%;border-radius:9px;background:linear-gradient(90deg,#e65100,#ff9800);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#4caf50;font-weight:700; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Go-Live</div>
+  <div style="font-size:10px;color:#555;text-align:center;">15/12</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/01</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:80.4%;width:19.6%;height:100%;border-radius:9px;background:linear-gradient(90deg,#2e7d32,#4caf50);"></div></div>
 </div></div>
-</div>
-
-<!-- SECTION: ARQUITECTURA -->
-<div style="border:2px solid #6366f1;border-radius:8px;margin:12px 0;overflow:hidden">
-<div style="padding:6px 12px;font-size:12px;font-weight:700;color:#4338ca;font-style:italic">Definición Arquitectura Empresarial y Soluciones <span style="font-weight:400;font-size:10px;color:#6366f1">(01/06 — 24/07)</span></div>
-<div style="overflow-x:auto"><div class="gr" style="row-gap:0;padding:4px 0;background:rgba(99,102,241,.02)">
-  <div style="padding:3px 8px;font-size:9px;color:#333">Arq. IDM (Empresarial + Soluciones)</div><div style="font-size:7px;color:#888;text-align:center">01/06</div><div style="font-size:7px;color:#888;text-align:center">26/06</div><div class="gc" style="grid-column:4/8"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#3b82f6,#1d4ed8)"></div></div><div class="gc" style="grid-column:8/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Arq. Lago de Datos (SAGHI, Xplora, Terceros)</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">03/06</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">26/06</div><div class="gc" style="grid-column:4/8;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#1d4ed8,#1e3a8a)"></div></div><div class="gc" style="grid-column:8/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Arq. Magneto</div><div style="font-size:7px;color:#888;text-align:center">09/06</div><div style="font-size:7px;color:#888;text-align:center">26/06</div><div class="gc" style="grid-column:5/8"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#059669,#047857)"></div></div><div class="gc" style="grid-column:8/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Arq. Adebol / Fonbolivar / Préstamos</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">30/06</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">10/07</div><div class="gc" style="grid-column:8/10;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#7c3aed,#5b21b6)"></div></div><div class="gc" style="grid-column:10/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Arq. Tronador / Tronador Santas</div><div style="font-size:7px;color:#888;text-align:center">30/06</div><div style="font-size:7px;color:#888;text-align:center">10/07</div><div class="gc" style="grid-column:8/10"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#9333ea,#6b21a8)"></div></div><div class="gc" style="grid-column:10/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Arq. SITRI / Aux. Contables / SunSystem</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">13/07</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">24/07</div><div class="gc" style="grid-column:10/12;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#6366f1,#4338ca)"></div></div><div class="gc" style="grid-column:12/36;background:#f9fafb"></div>
+<div style="border:2px solid #6366f1;border-radius:8px;margin:10px 0;overflow:hidden">
+<div style="padding:6px 12px;font-size:12px;font-weight:700;color:#4338ca;font-style:italic">Def. Arquitectura Empresarial y Soluciones <span style="font-weight:400;font-size:10px;color:#6366f1">(01/06 - 24/07) | Esp: 87% | Av: 19%</span></div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Arq. IDM (Empresarial + Soluciones)</div>
+  <div style="font-size:10px;color:#555;text-align:center;">01/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">26/06</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">100%</div>
+  <div style="font-size:10px;color:#4caf50;text-align:center;font-weight:700;">100%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:0%;width:10.6%;height:100%;border-radius:9px;background:linear-gradient(90deg,#1565c0,#42a5f5);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Arq. Lago Datos (SAGHI,Xplora,Terc)</div>
+  <div style="font-size:10px;color:#555;text-align:center;">03/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">26/06</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">100%</div>
+  <div style="font-size:10px;color:#ffa726;text-align:center;font-weight:700;">30%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:0.8%;width:9.8%;height:100%;border-radius:9px;background:linear-gradient(90deg,#0d47a1,#1976d2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Arq. Magneto</div>
+  <div style="font-size:10px;color:#555;text-align:center;">09/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">26/06</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">100%</div>
+  <div style="font-size:10px;color:#ffa726;text-align:center;font-weight:700;">40%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:3.3%;width:7.3%;height:100%;border-radius:9px;background:linear-gradient(90deg,#2e7d32,#43a047);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Arq. Adebol / Fonbolivar / Prestamos</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">10/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">100%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.8%;width:4.5%;height:100%;border-radius:9px;background:linear-gradient(90deg,#4527a0,#7e57c2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Arq. Tronador / Tronador Santas</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">10/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">100%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.8%;width:4.5%;height:100%;border-radius:9px;background:linear-gradient(90deg,#6a1b9a,#ab47bc);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Arq. SITRI / Aux.Contab / SunSystem</div>
+  <div style="font-size:10px;color:#555;text-align:center;">13/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">24/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">42%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:17.1%;width:4.5%;height:100%;border-radius:9px;background:linear-gradient(90deg,#4338ca,#6366f1);"></div></div>
 </div></div>
-</div>
-
-<!-- SECTION: DESARROLLO -->
-<div style="border:2px solid #7c3aed;border-radius:8px;margin:12px 0;overflow:hidden">
-<div style="padding:6px 12px;font-size:12px;font-weight:700;color:#5b21b6;font-style:italic">Desarrollo Integraciones <span style="font-weight:400;font-size:10px;color:#7c3aed">(30/06 — 30/09)</span></div>
-<div style="overflow-x:auto"><div class="gr" style="row-gap:0;padding:4px 0;background:rgba(124,58,237,.02)">
-  <div style="padding:3px 8px;font-size:9px;color:#333">Lago de Datos - SAGHI</div><div style="font-size:7px;color:#888;text-align:center">30/06</div><div style="font-size:7px;color:#888;text-align:center">31/07</div><div class="gc" style="grid-column:7/12"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#2563eb,#1d4ed8)"></div></div><div class="gc" style="grid-column:12/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">IDM</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">30/06</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">31/07</div><div class="gc" style="grid-column:7/12;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#1d4ed8,#1e40af)"></div></div><div class="gc" style="grid-column:12/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Magneto</div><div style="font-size:7px;color:#888;text-align:center">30/06</div><div style="font-size:7px;color:#888;text-align:center">31/07</div><div class="gc" style="grid-column:7/12"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#06b6d4,#0891b2)"></div></div><div class="gc" style="grid-column:12/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Lago (Xplora, Terceros, Adebol/Fonb/Prést)</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">30/06</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">31/07</div><div class="gc" style="grid-column:7/12;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#22d3ee,#06b6d4)"></div></div><div class="gc" style="grid-column:12/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Adebol</div><div style="font-size:7px;color:#888;text-align:center">13/07</div><div style="font-size:7px;color:#888;text-align:center">31/08</div><div class="gc" style="grid-column:9/16"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#4338ca,#312e81)"></div></div><div class="gc" style="grid-column:16/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Fonbolivar</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">13/07</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">31/08</div><div class="gc" style="grid-column:9/16;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#5b21b6,#3b0764)"></div></div><div class="gc" style="grid-column:16/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Préstamos</div><div style="font-size:7px;color:#888;text-align:center">13/07</div><div style="font-size:7px;color:#888;text-align:center">31/08</div><div class="gc" style="grid-column:9/16"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#7e57c2,#4527a0)"></div></div><div class="gc" style="grid-column:16/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Tronador Tesorería</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">13/07</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">12/08</div><div class="gc" style="grid-column:9/15;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#1e3a8a,#172554)"></div></div><div class="gc" style="grid-column:15/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">Tronador Santas</div><div style="font-size:7px;color:#888;text-align:center">13/07</div><div style="font-size:7px;color:#888;text-align:center">12/08</div><div class="gc" style="grid-column:9/15"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#312e81,#1e1b4b)"></div></div><div class="gc" style="grid-column:15/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">SunSystem (archivo plano)</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">27/08</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">30/09</div><div class="gc" style="grid-column:15/20;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#1e293b,#0f172a)"></div></div><div class="gc" style="grid-column:20/36;background:#f9fafb"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333">SITRI (archivo plano)</div><div style="font-size:7px;color:#888;text-align:center">27/08</div><div style="font-size:7px;color:#888;text-align:center">30/09</div><div class="gc" style="grid-column:15/20"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#334155,#1e293b)"></div></div><div class="gc" style="grid-column:20/36"></div>
-  <div style="padding:3px 8px;font-size:9px;color:#333;background:#f9fafb">Aux. Contables (archivo plano)</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">27/08</div><div style="font-size:7px;color:#888;text-align:center;background:#f9fafb">30/09</div><div class="gc" style="grid-column:15/20;background:#f9fafb"><div class="gb" style="left:0;width:100%;background:linear-gradient(90deg,#475569,#334155)"></div></div><div class="gc" style="grid-column:20/36;background:#f9fafb"></div>
+<div style="border:2px solid #7c3aed;border-radius:8px;margin:10px 0;overflow:hidden">
+<div style="padding:6px 12px;font-size:12px;font-weight:700;color:#5b21b6;font-style:italic">Desarrollo Integraciones <span style="font-weight:400;font-size:10px;color:#7c3aed">(30/06 - 30/09) | Esp: 19% | Av: 5%</span></div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Lago de Datos - SAGHI</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">56%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.8%;width:12.7%;height:100%;border-radius:9px;background:linear-gradient(90deg,#1565c0,#42a5f5);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">IDM</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">56%</div>
+  <div style="font-size:10px;color:#ffa726;text-align:center;font-weight:700;">10%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.8%;width:12.7%;height:100%;border-radius:9px;background:linear-gradient(90deg,#0d47a1,#1976d2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">IDM - Middleware</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">56%</div>
+  <div style="font-size:10px;color:#ffa726;text-align:center;font-weight:700;">50%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.8%;width:12.7%;height:100%;border-radius:9px;background:linear-gradient(90deg,#00695c,#26a69a);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Magneto</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/07</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">56%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.8%;width:12.7%;height:100%;border-radius:9px;background:linear-gradient(90deg,#00838f,#26c6da);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Lago (Xplora,Terc,Adebol/Fonb/Prest)</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/06</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">29%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:11.8%;width:25.8%;height:100%;border-radius:9px;background:linear-gradient(90deg,#004d40,#4db6ac);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Adebol</div>
+  <div style="font-size:10px;color:#555;text-align:center;">13/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">10%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:17.1%;width:20.5%;height:100%;border-radius:9px;background:linear-gradient(90deg,#4527a0,#7e57c2);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Fonbolivar</div>
+  <div style="font-size:10px;color:#555;text-align:center;">13/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">10%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:17.1%;width:20.5%;height:100%;border-radius:9px;background:linear-gradient(90deg,#6a1b9a,#ab47bc);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Prestamos</div>
+  <div style="font-size:10px;color:#555;text-align:center;">13/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">10%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:17.1%;width:20.5%;height:100%;border-radius:9px;background:linear-gradient(90deg,#4a148c,#9c27b0);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Tronador Tesoreria</div>
+  <div style="font-size:10px;color:#555;text-align:center;">13/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">31/08</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">10%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:17.1%;width:20.5%;height:100%;border-radius:9px;background:linear-gradient(90deg,#1a237e,#3949ab);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Tronador Santas</div>
+  <div style="font-size:10px;color:#555;text-align:center;">13/07</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/09</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">6%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:17.1%;width:32.7%;height:100%;border-radius:9px;background:linear-gradient(90deg,#283593,#5c6bc0);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">SunSystem (archivo plano)</div>
+  <div style="font-size:10px;color:#555;text-align:center;">27/08</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/09</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:35.9%;width:13.9%;height:100%;border-radius:9px;background:linear-gradient(90deg,#37474f,#607d8b);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;background:#f9fafb;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">SITRI (archivo plano)</div>
+  <div style="font-size:10px;color:#555;text-align:center;">27/08</div>
+  <div style="font-size:10px;color:#555;text-align:center;">30/09</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:35.9%;width:13.9%;height:100%;border-radius:9px;background:linear-gradient(90deg,#455a64,#78909c);"></div></div>
+</div><div style="display:grid;grid-template-columns:240px 44px 44px 40px 40px 1fr;align-items:center;min-height:28px;border-bottom:1px solid #eee;">
+  <div style="padding:2px 8px;font-size:11px;color:#333; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Aux. Contables (archivo plano)</div>
+  <div style="font-size:10px;color:#555;text-align:center;">27/08</div>
+  <div style="font-size:10px;color:#555;text-align:center;">12/09</div>
+  <div style="font-size:10px;color:#1976d2;text-align:center;font-weight:700;">0%</div>
+  <div style="font-size:10px;color:#ef5350;text-align:center;font-weight:700;">0%</div>
+  <div style="position:relative;height:18px;"><div style="position:absolute;left:35.9%;width:7.2%;height:100%;border-radius:9px;background:linear-gradient(90deg,#546e7a,#90a4ae);"></div></div>
 </div></div>
-</div>
-
-</div>
-
-<!-- LEGEND -->
-<div style="display:flex;gap:14px;flex-wrap:wrap;padding:10px 0;font-size:9px;color:#555">
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#3b82f6"></div> Arquitectura / PO / TH</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#7c3aed"></div> Equipo TI Portales</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#1d4ed8"></div> Equipo TI SAGHI</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#06b6d4"></div> Proveedor IDM / Magneto / Linix</div>
-  <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:#ea580c"></div> QC (Pruebas)</div>
-</div>
-
 </div></div></div>
 
-<!-- TAB 6: DEPENDENCIAS Y RIESGOS -->
 <div id="tab-riesgos" class="tab-content">
 <div class="informe">
 <h1>DEPENDENCIAS Y RIESGOS</h1>
